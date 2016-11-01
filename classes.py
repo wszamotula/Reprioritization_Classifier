@@ -4,6 +4,16 @@ class bugs:
     def __init__(self):
         bugs = []
 
+
+    def append(self, bug):
+        """
+        Add a new bug to the collection
+        :type bug: bug
+        """
+        self.bugs.append(bug)
+        return
+
+
 class bug:
     'Details on a bug'
 
@@ -52,10 +62,26 @@ class bug:
         version = ''
         whiteboard = ''
 
+
     def bug_snapshot(self, age=7):
+        """
+        revert changes to create snapshot at age
+        :type age: int
+        """
         snapshot = bug()
-        # revert changes to create snapshot at age
+        # Loop through histories of the bug (assuming histories are stored most recent first)
+        # If change occurred less than age days after bug was created, break loop
+        # For each change in the history, revert change
         return snapshot
+
+    def revert_change(self, change):
+        """
+        Revert a single change made to a bug
+        :type change: change
+        """
+        # TODO: Make sure this works for array types as well
+        exec('self.' + change.field_name + ' = ' + change.removed)
+        return
 
 class history:
     'history of a change for a particular bug'
