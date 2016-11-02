@@ -1,9 +1,12 @@
-class bugs:
-    'Collection of bugs'
+import copy
+from datetime import datetime, timedelta
+
+
+class Bugs:
+    """Collection of bugs"""
 
     def __init__(self):
         self.bugs = []
-
 
     def append(self, bug):
         """
@@ -14,8 +17,9 @@ class bugs:
         return
 
 
-class bug:
-    'Details on a bug'
+class Bug:
+    """Details on a bug"""
+    # TODO: We might want to change all these time fields to python time objects
 
     def __init__(self):
         self.actual_time = 0.0
@@ -29,7 +33,7 @@ class bug:
         self.classification = ''
         self.component = ''
         self.comments = []
-        self.creation_time = ''
+        self.creation_time = datetime.now()
         self.creator = ''
         # creator_detail = '' user object
         self.deadline = ''
@@ -63,16 +67,26 @@ class bug:
         self.version = ''
         self.whiteboard = ''
 
-
     def bug_snapshot(self, age=7):
         """
         revert changes to create snapshot at age
         :type age: int
         """
-        snapshot = bug()
-        # Loop through histories of the bug (assuming histories are stored most recent first)
-        # If change occurred less than age days after bug was created, break loop
-        # For each change in the history, revert change
+        snapshot = copy.deepcopy(self)
+        new_comments = []
+
+        for history in self.histories:
+            # Assuming histories are ordered most recent first
+            if history.when - self.creation_time < timedelta(days=age):
+                break
+            for change in history.changes:
+                snapshot.revert_change(change)
+
+        for comment in self.comments:
+            if comment.creation_time - self.creation_time < timedelta(days=age):
+                new_comments.append(copy.deepcopy(comment))
+        snapshot.comments = new_comments
+
         return snapshot
 
     def revert_change(self, change):
@@ -80,21 +94,22 @@ class bug:
         Revert a single change made to a bug
         :type change: change
         """
-        # TODO: Make sure this works for array types as well
+        # TODO: Make sure this works for list types as well
         exec('self.' + change.field_name + ' = ' + change.removed)
         return
 
-class history:
-    'history of a change to a particular bug'
+
+class History:
+    """history of a change to a particular bug"""
 
     def __init__(self):
-        self.when = ''
+        self.when = datetime.now()
         self.who = ''
         self.changes = []
 
 
-class change:
-    'a change made to a particular bug'
+class Change:
+    """a change made to a particular bug"""
 
     def __init__(self):
         self.field_name = ''
@@ -102,14 +117,15 @@ class change:
         self.added = ''
         self.attachment_id = 0
 
-class comment:
-    'A comment linked to a bug'
+
+class Comment:
+    """A comment linked to a bug"""
 
     def __init__(self):
         self.attachment_id = ''
         self.author = ''
         self.bug_id = 0
-        self.creation_time = ''
+        self.creation_time = datetime.now()
         self.creator = ''
         self.id = 0
         self.is_private = False
