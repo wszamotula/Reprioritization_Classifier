@@ -2,7 +2,7 @@ class bugs:
     'Collection of bugs'
 
     def __init__(self):
-        bugs = []
+        self.bugs = []
 
 
     def append(self, bug):
@@ -18,49 +18,49 @@ class bug:
     'Details on a bug'
 
     def __init__(self):
-        actual_time = 0.0
-        alias = []
-        assigned_to = ''
+        self.actual_time = 0.0
+        self.alias = []
+        self.assigned_to = ''
         # assigned_to_detail = '' user object
-        blocks = []
-        bug_id = 0
-        cc = []
+        self.blocks = []
+        self.bug_id = 0
+        self.cc = []
         # cc_detail = [] user object
-        classification = ''
-        component = ''
-        creation_time = ''
-        creator = ''
+        self.classification = ''
+        self.component = ''
+        self.creation_time = ''
+        self.creator = ''
         # creator_detail = '' user object
-        deadline = ''
-        depends_on = []
-        dupe_of = 0
-        estimated_time = 0.0
+        self.deadline = ''
+        self.depends_on = []
+        self.dupe_of = 0
+        self.estimated_time = 0.0
         # flags = [] flag object
-        groups = []
-        histories = []
-        is_cc_accessible = False
-        is_confirmed = False
-        is_open = False
-        is_creator_accessible = False
-        keywords = []
-        last_change_time = ''
-        op_sys = ''
-        platform = ''
-        priority = ''
-        product = ''
-        qa_contact = ''
+        self.groups = []
+        self.histories = []
+        self.is_cc_accessible = False
+        self.is_confirmed = False
+        self.is_open = False
+        self.is_creator_accessible = False
+        self.keywords = []
+        self.last_change_time = ''
+        self.op_sys = ''
+        self.platform = ''
+        self.priority = ''
+        self.product = ''
+        self.qa_contact = ''
         # qa_contact_detail = '' user object
-        remaining_time = 0.0
-        resolution = ''
-        see_also = []
-        severity = ''
-        status = ''
-        summary = ''
-        target_milestone = ''
-        update_token = ''
-        url = ''
-        version = ''
-        whiteboard = ''
+        self.remaining_time = 0.0
+        self.resolution = ''
+        self.see_also = []
+        self.severity = ''
+        self.status = ''
+        self.summary = ''
+        self.target_milestone = ''
+        self.update_token = ''
+        self.url = ''
+        self.version = ''
+        self.whiteboard = ''
 
 
     def bug_snapshot(self, age=7):
@@ -87,16 +87,16 @@ class history:
     'history of a change for a particular bug'
 
     def __init__(self):
-        when = ''
-        who = ''
-        changes = []
+        self.when = ''
+        self.who = ''
+        self.changes = []
 
 
 class change:
     'a change made to a particular bug'
 
     def __init(self):
-        field_name = ''
-        removed = ''
-        added = ''
-        attachment_id = 0
+        self.field_name = ''
+        self.removed = ''
+        self.added = ''
+        self.attachment_id = 0
