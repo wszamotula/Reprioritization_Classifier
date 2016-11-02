@@ -23,11 +23,12 @@ class bug:
         self.assigned_to = ''
         # assigned_to_detail = '' user object
         self.blocks = []
-        self.bug_id = 0
+        self.id = 0
         self.cc = []
         # cc_detail = [] user object
         self.classification = ''
         self.component = ''
+        self.comments = []
         self.creation_time = ''
         self.creator = ''
         # creator_detail = '' user object
@@ -84,7 +85,7 @@ class bug:
         return
 
 class history:
-    'history of a change for a particular bug'
+    'history of a change to a particular bug'
 
     def __init__(self):
         self.when = ''
@@ -95,8 +96,24 @@ class history:
 class change:
     'a change made to a particular bug'
 
-    def __init(self):
+    def __init__(self):
         self.field_name = ''
         self.removed = ''
         self.added = ''
         self.attachment_id = 0
+
+class comment:
+    'A comment linked to a bug'
+
+    def __init__(self):
+        self.attachment_id = ''
+        self.author = ''
+        self.bug_id = 0
+        self.creation_time = ''
+        self.creator = ''
+        self.id = 0
+        self.is_private = False
+        self.raw_text = ''
+        self.tags = []
+        self.text = ''
+        self.time = ''
