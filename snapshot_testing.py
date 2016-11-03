@@ -26,8 +26,8 @@ def main():
     history2.changes.append(change2)
     history2.when = datetime(2016, 10, 5, 12, 30)
 
-    new_bug.histories.append(history1)
     new_bug.histories.append(history2)
+    new_bug.histories.append(history1)
 
     comment1 = Comment()
     comment1.creation_time = datetime(2016, 10, 30, 12, 30)
@@ -35,7 +35,7 @@ def main():
 
     comment2 = Comment()
     comment2.creation_time = datetime(2016, 10, 5, 12, 30)
-    comment2.text = 'I should stay'
+    comment2.text = 'I should &%$^stay'
 
     new_bug.comments.append(comment1)
     new_bug.comments.append(comment2)

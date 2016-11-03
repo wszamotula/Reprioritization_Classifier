@@ -6,7 +6,7 @@ class Bugs:
     """Collection of bugs"""
 
     def __init__(self):
-        self.bugs = []
+        self.bugs = {}
 
     def append(self, bug):
         """
@@ -72,33 +72,40 @@ class Bug:
         revert changes to create snapshot at age
         :type age: int
         """
-        snapshot = copy.deepcopy(self)
+        snapshot = copy.deepcopy(self) # Could be performance hit, maybe modify current bug instead?
         new_comments = []
 
+        self.histories.reverse()
         for history in self.histories:
             # Assuming histories are ordered most recent first
-            # TODO: Verify that this assumption is correct
-            if history.when - self.creation_time < timedelta(days=age):
+            if conv_dt(history.when) - conv_dt(self.creation_time) < timedelta(days=age):
                 break
             for change in history.changes:
                 snapshot.revert_change(change)
 
         for comment in self.comments:
-            if comment.creation_time - self.creation_time < timedelta(days=age):
+            if conv_dt(comment.creation_time) - conv_dt(self.creation_time) < timedelta(days=age):
                 new_comments.append(copy.deepcopy(comment))
         snapshot.comments = new_comments
 
         return snapshot
 
-    def revert_change(change):
+    def revert_change(self, change):
         """
         Revert a single change made to a bug
         :type change: change
         """
         # TODO: Make sure this works for list types as well
-        exec('self.' + change.field_name + ' = ' + change.removed)
+        if(type(getattr(self, change.field_name, None)) is list and change.removed == ''):
+            exec('self.' + change.field_name + '.remove(' + change.added + ')')
+
+        else:
+            setattr(self, change.field_name, change.removed)
+
         return
 
+def conv_dt(dt_string):
+    return datetime.strptime(dt_string, '%Y-%m-%dT%XZ')
 
 class History:
     """history of a change to a particular bug"""

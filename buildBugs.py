@@ -72,28 +72,49 @@ def buildBugObjects():
                 curr_bug.histories.append(curr_history)
 
 
-        allBugs.append(curr_bug)
+        allBugs.bugs[curr_bug.id] = curr_bug
 
+    # TODO: Pickle bugs
 
     ##DEBUGGING SCRIPT TO PRINT FIRST BUG
     DEBUG = True
     if DEBUG == True:
         for member in members:
-            print member+": "+str(getattr(allBugs.bugs[0],member))
-        print "PRINTING COMMENTS"
-        for curr_comment in allBugs.bugs[0].comments:
-            print "------"
-            for comment_member in comment_members:
-                print comment_member + ": " +str(getattr(curr_comment,comment_member))
-        print "PRINTING HISTORY"
-        for curr_history in allBugs.bugs[0].histories:
-            print "-------"
-            print "who: " + str(curr_history.who)
-            print "when: "+ str(curr_history.when)
+            print(member+": "+str(getattr(allBugs.bugs[656504],member)))
+        # print("PRINTING COMMENTS")
+        # for curr_comment in allBugs.bugs[656504].comments:
+        #     print("------")
+        #     for comment_member in comment_members:
+        #         print(comment_member + ": " +str(getattr(curr_comment,comment_member)))
+        print("PRINTING HISTORY")
+        for curr_history in allBugs.bugs[656504].histories:
+            print("-------")
+            print("who: " + str(curr_history.who))
+            print("when: "+ str(curr_history.when))
             for curr_change in curr_history.changes:
                 for change_member in change_members:
-                    print change_member+": " +str(getattr(curr_change,change_member))
-    
+                    print(change_member+": " +str(getattr(curr_change,change_member)))
+
+    snapshot = allBugs.bugs[656504].bug_snapshot()
+    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+
+    if DEBUG == True:
+        for member in members:
+            print(member+": "+str(getattr(snapshot,member)))
+        # print("PRINTING COMMENTS")
+        # for curr_comment in snapshot.comments:
+        #     print("------")
+        #     for comment_member in comment_members:
+        #         print(comment_member + ": " +str(getattr(curr_comment,comment_member)))
+        # print("PRINTING HISTORY")
+        # for curr_history in snapshot.histories:
+        #     print("-------")
+        #     print("who: " + str(curr_history.who))
+        #     print("when: "+ str(curr_history.when))
+        #     for curr_change in curr_history.changes:
+        #         for change_member in change_members:
+        #             print(change_member+": " +str(getattr(curr_change,change_member)))
+
     return
 
 if __name__ == "__main__":
