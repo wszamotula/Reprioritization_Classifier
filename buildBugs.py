@@ -1,11 +1,6 @@
 import json
 import os
-from bug_classes import Bug
-from bug_classes import Bugs
-from bug_classes import History
-from bug_classes import Change
-from bug_classes import Comment
-
+from bug_classes import Bug, Bugs, History, Change, Comment
 
 def buildBugObjects():
     directory = ''

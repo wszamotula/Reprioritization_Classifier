@@ -43,10 +43,10 @@ class Bug:
         # flags = [] flag object
         self.groups = []
         self.histories = []
-        self.is_cc_accessible = False
-        self.is_confirmed = False
-        self.is_open = False
-        self.is_creator_accessible = False
+        self.is_cc_accessible = None
+        self.is_confirmed = None
+        self.is_open = None
+        self.is_creator_accessible = None
         self.keywords = []
         self.last_change_time = ''
         self.op_sys = ''
@@ -77,6 +77,7 @@ class Bug:
 
         for history in self.histories:
             # Assuming histories are ordered most recent first
+            # TODO: Verify that this assumption is correct
             if history.when - self.creation_time < timedelta(days=age):
                 break
             for change in history.changes:
@@ -89,7 +90,7 @@ class Bug:
 
         return snapshot
 
-    def revert_change(self, change):
+    def revert_change(change):
         """
         Revert a single change made to a bug
         :type change: change
@@ -128,7 +129,7 @@ class Comment:
         self.creation_time = datetime.now()
         self.creator = ''
         self.id = 0
-        self.is_private = False
+        self.is_private = None
         self.raw_text = ''
         self.tags = []
         self.text = ''
