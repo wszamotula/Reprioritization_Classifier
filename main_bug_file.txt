@@ -1,0 +1,3528 @@
+{
+   "bugs" : [
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "cmtalbert@gmail.com",
+            "hskupin@gmail.com",
+            "josh@joshmatthews.net",
+            "lhenry@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "cmtalbert@gmail.com",
+               "id" : 250777,
+               "name" : "cmtalbert@gmail.com",
+               "real_name" : ""
+            },
+            {
+               "email" : "hskupin@gmail.com",
+               "id" : 76551,
+               "name" : "hskupin@gmail.com",
+               "real_name" : "Henrik Skupin (:whimboo)"
+            },
+            {
+               "email" : "josh@joshmatthews.net",
+               "id" : 241497,
+               "name" : "josh@joshmatthews.net",
+               "real_name" : "Josh Matthews [:jdm]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            }
+         ],
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-04-18T08:49:14Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Graveyard",
+         "comment_count" : 3,
+         "component" : "Mozmill",
+         "creation_time" : "2011-05-11T23:59:26Z",
+         "creator" : "k0scist@gmail.com",
+         "creator_detail" : {
+            "email" : "k0scist@gmail.com",
+            "id" : 376043,
+            "name" : "k0scist@gmail.com",
+            "real_name" : "Jeff Hammel"
+         },
+         "depends_on" : [],
+         "dupe_of" : 661561,
+         "flags" : [],
+         "groups" : [],
+         "id" : 656504,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2016-08-24T16:02:38Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "Testing Graveyard",
+         "qa_contact" : "",
+         "resolution" : "DUPLICATE",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "jsbridge has a weird variable settings_env which isnt used anywhere",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "unspecified",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "fmdevelopertim@gmail.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozilla@ahlblom.eu",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "fmdevelopertim@gmail.com",
+               "id" : 345637,
+               "name" : "fmdevelopertim@gmail.com",
+               "real_name" : "Tim (fmdeveloper)"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozilla@ahlblom.eu",
+               "id" : 410947,
+               "name" : "mozilla@ahlblom.eu",
+               "real_name" : "Thomas Ahlblom"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-06-07T18:46:25Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 6,
+         "component" : "Extensions: GuidedBugEntry",
+         "creation_time" : "2011-10-15T00:21:58Z",
+         "creator" : "jidanni@jidanni.org",
+         "creator_detail" : {
+            "email" : "jidanni@jidanni.org",
+            "id" : 180163,
+            "name" : "jidanni@jidanni.org",
+            "real_name" : "Dan Jacobson"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 694713,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-06-07T18:46:25Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "minor",
+         "status" : "RESOLVED",
+         "summary" : "Make sure what the user is asked is what later is printed",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-15T14:49:14Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 5,
+         "component" : "Extensions: MyDashboard",
+         "creation_time" : "2013-02-04T23:46:13Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 837922,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2014-09-16T07:40:33Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Clarify \"in progress\" and \"new\" labels on user dashboard",
+         "target_milestone" : "---",
+         "url" : "https://bugzilla-dev.allizom.org/page.cgi?id=mydashboard.html",
+         "version" : "Development/Staging",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-03-06T09:31:18Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 2,
+         "component" : "User Interface",
+         "creation_time" : "2013-03-06T04:48:40Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [
+            837878
+         ],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 848216,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-14T22:54:15Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "INVALID",
+         "see_also" : [],
+         "severity" : "enhancement",
+         "status" : "RESOLVED",
+         "summary" : "Test bug",
+         "target_milestone" : "---",
+         "url" : "http://bugzilla.mozilla.org",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : "test"
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "lhenry@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-09T18:59:29Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Sandstone/Mozilla Skin",
+         "creation_time" : "2013-03-09T02:20:00Z",
+         "creator" : "n.nethercote@gmail.com",
+         "creator_detail" : {
+            "email" : "n.nethercote@gmail.com",
+            "id" : 334849,
+            "name" : "n.nethercote@gmail.com",
+            "real_name" : "Nicholas Nethercote [:njn]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 849465,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-09T18:59:29Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Wow, the comment headers are *huge*",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            859550,
+            885464
+         ],
+         "cc" : [
+            "a9016009@gmx.de",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "justdave@mozilla.com",
+            "lhenry@mozilla.com",
+            "mcote@mozilla.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "a9016009@gmx.de",
+               "id" : 217879,
+               "name" : "a9016009@gmx.de",
+               "real_name" : "Andre Klapper"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "justdave@mozilla.com",
+               "id" : 10297,
+               "name" : "justdave@mozilla.com",
+               "real_name" : "Dave Miller [:justdave] (justdave@bugzilla.org)"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mcote@mozilla.com",
+               "id" : 395743,
+               "name" : "mcote@mozilla.com",
+               "real_name" : "Mark Côté [:mcote]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-04-29T20:32:21Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Extensions: UserProfile",
+         "creation_time" : "2013-04-16T17:36:02Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 862441,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-26T11:54:49Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "lhenry@mozilla.com",
+         "qa_contact_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Write out all the strings for the bugzilla user profile page",
+         "target_milestone" : "---",
+         "url" : "https://wiki.mozilla.org/BMO/UserProfiles",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : "[ateamtrack: p=bugzilla q=2 m=2]"
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [],
+         "cc_detail" : [],
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-05-03T17:41:20Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 1,
+         "component" : "General",
+         "creation_time" : "2013-04-16T20:50:10Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 862536,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-05-03T17:41:20Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "Developer Documentation",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Fix broken links on Screening Duplicate bugs MDN page",
+         "target_milestone" : "---",
+         "url" : "https://developer.mozilla.org/en-US/docs/Screening_duplicate_bugs",
+         "version" : "unspecified",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "deletesoftware+moz@yandex.ru",
+            "dkl@mozilla.com",
+            "ehsan@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "raul.malea@gmail.com",
+            "reed@reedloden.com",
+            "wclouser@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "deletesoftware+moz@yandex.ru",
+               "id" : 197295,
+               "name" : "deletesoftware+moz@yandex.ru",
+               "real_name" : "[:Aleksej]"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "ehsan@mozilla.com",
+               "id" : 251051,
+               "name" : "ehsan@mozilla.com",
+               "real_name" : "Away, back on Nov 10"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "raul.malea@gmail.com",
+               "id" : 395535,
+               "name" : "raul.malea@gmail.com",
+               "real_name" : "Raul Malea"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            },
+            {
+               "email" : "wclouser@mozilla.com",
+               "id" : 177149,
+               "name" : "wclouser@mozilla.com",
+               "real_name" : "Wil Clouser [:clouserw]"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-01T16:12:25Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 4,
+         "component" : "Administration",
+         "creation_time" : "2013-04-18T17:28:38Z",
+         "creator" : "wkocher@mozilla.com",
+         "creator_detail" : {
+            "email" : "wkocher@mozilla.com",
+            "id" : 308534,
+            "name" : "wkocher@mozilla.com",
+            "real_name" : "Wes Kocher (:KWierso)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 863345,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-01T16:12:25Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "lhenry@mozilla.com",
+         "qa_contact_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Unshare some of the really old shared searches.",
+         "target_milestone" : "---",
+         "url" : "https://bugzilla.mozilla.org/userprefs.cgi?tab=saved-searches",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "a9016009@gmx.de",
+            "david.weir@mozilla.org.uk",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "justdave@mozilla.com",
+            "lhenry@mozilla.com",
+            "mcote@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "a9016009@gmx.de",
+               "id" : 217879,
+               "name" : "a9016009@gmx.de",
+               "real_name" : "Andre Klapper"
+            },
+            {
+               "email" : "david.weir@mozilla.org.uk",
+               "id" : 369982,
+               "name" : "david.weir@mozilla.org.uk",
+               "real_name" : "David Weir (satdav)"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "justdave@mozilla.com",
+               "id" : 10297,
+               "name" : "justdave@mozilla.com",
+               "real_name" : "Dave Miller [:justdave] (justdave@bugzilla.org)"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mcote@mozilla.com",
+               "id" : 395743,
+               "name" : "mcote@mozilla.com",
+               "real_name" : "Mark Côté [:mcote]"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2015-02-05T14:28:35Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 6,
+         "component" : "Administration",
+         "creation_time" : "2013-04-26T17:49:41Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 866196,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2015-02-05T14:28:35Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Update the product and component text and links to more information",
+         "target_milestone" : "---",
+         "url" : "https://wiki.mozilla.org/Bugzilla_Products",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : "[ateamtrack: p=bugmaster q=2 m=2] "
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-05-03T15:34:17Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Administration",
+         "creation_time" : "2013-05-02T20:46:34Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [
+            868171
+         ],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 868161,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-05-03T15:34:17Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Remove skywriter from the Product list",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "brett@mozillafoundation.org",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "laura@mozillafoundation.org",
+            "lhenry@mozilla.com",
+            "matt@mozillafoundation.org",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com",
+            "sayak.bugsmith@gmail.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "brett@mozillafoundation.org",
+               "id" : 382048,
+               "name" : "brett@mozillafoundation.org",
+               "real_name" : "Brett Gaylor [:brett]"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "laura@mozillafoundation.org",
+               "id" : 431243,
+               "name" : "laura@mozillafoundation.org",
+               "real_name" : "Laura Hilliger [:epilepticrabbit]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "matt@mozillafoundation.org",
+               "id" : 431323,
+               "name" : "matt@mozillafoundation.org",
+               "real_name" : "Matt Thompson (@OpenMatt :OpenMatt)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            },
+            {
+               "email" : "sayak.bugsmith@gmail.com",
+               "id" : 430512,
+               "name" : "sayak.bugsmith@gmail.com",
+               "real_name" : "Sayak Sarkar"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-23T11:23:33Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Administration",
+         "creation_time" : "2013-05-15T14:38:36Z",
+         "creator" : "matt@mozillafoundation.org",
+         "creator_detail" : {
+            "email" : "matt@mozillafoundation.org",
+            "id" : 431323,
+            "name" : "matt@mozillafoundation.org",
+            "real_name" : "Matt Thompson (@OpenMatt :OpenMatt)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 872534,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-23T13:48:49Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "WONTFIX",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Add \"Mentors\" component to Webmaker product in bugzilla",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "glob@mozilla.com",
+            "lhenry@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-09T19:40:31Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 2,
+         "component" : "Sandstone/Mozilla Skin",
+         "creation_time" : "2013-06-06T22:20:03Z",
+         "creator" : "samuel.sidler@gmail.com",
+         "creator_detail" : {
+            "email" : "samuel.sidler@gmail.com",
+            "id" : 366493,
+            "name" : "samuel.sidler@gmail.com",
+            "real_name" : "Samuel Sidler (:ss)"
+         },
+         "depends_on" : [],
+         "dupe_of" : 848240,
+         "flags" : [],
+         "groups" : [],
+         "id" : 880483,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-09T19:40:31Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "DUPLICATE",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Visited links are hard to see in comments (and maybe elsewhere)",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            892662
+         ],
+         "cc" : [
+            "brett@mozillafoundation.org",
+            "david.humphrey@senecacollege.ca",
+            "davida@mozillafoundation.org",
+            "dkl@mozilla.com",
+            "erica@mozillafoundation.org",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "matt@mozillafoundation.org",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "brett@mozillafoundation.org",
+               "id" : 382048,
+               "name" : "brett@mozillafoundation.org",
+               "real_name" : "Brett Gaylor [:brett]"
+            },
+            {
+               "email" : "david.humphrey@senecacollege.ca",
+               "id" : 250232,
+               "name" : "david.humphrey@senecacollege.ca",
+               "real_name" : "David Humphrey (:humph)"
+            },
+            {
+               "email" : "davida@mozillafoundation.org",
+               "id" : 288265,
+               "name" : "davida@mozillafoundation.org",
+               "real_name" : "David Ascher (:davida)"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "erica@mozillafoundation.org",
+               "id" : 463720,
+               "name" : "erica@mozillafoundation.org",
+               "real_name" : "Erica Sackin"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "matt@mozillafoundation.org",
+               "id" : 431323,
+               "name" : "matt@mozillafoundation.org",
+               "real_name" : "Matt Thompson (@OpenMatt :OpenMatt)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-17T16:16:59Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 18,
+         "component" : "Administration",
+         "creation_time" : "2013-06-20T15:44:35Z",
+         "creator" : "matt@mozillafoundation.org",
+         "creator_detail" : {
+            "email" : "matt@mozillafoundation.org",
+            "id" : 431323,
+            "name" : "matt@mozillafoundation.org",
+            "real_name" : "Matt Thompson (@OpenMatt :OpenMatt)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 885372,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-17T16:20:55Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Create new Product for MoFo Communications in Bugzilla",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dgarnerlee@gmail.com",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "kyle@nonpolynomial.com",
+            "ladamski@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "psiddh@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dgarnerlee@gmail.com",
+               "id" : 440694,
+               "name" : "dgarnerlee@gmail.com",
+               "real_name" : "Garner Lee"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "kyle@nonpolynomial.com",
+               "id" : 424719,
+               "name" : "kyle@nonpolynomial.com",
+               "real_name" : "Kyle Machulis [:qdot]"
+            },
+            {
+               "email" : "ladamski@mozilla.com",
+               "id" : 322148,
+               "name" : "ladamski@mozilla.com",
+               "real_name" : "Lucas Adamski [:ladamski]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "psiddh@gmail.com",
+               "id" : 455724,
+               "name" : "psiddh@gmail.com",
+               "real_name" : "psiddh"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-12T21:18:59Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 5,
+         "component" : "Administration",
+         "creation_time" : "2013-07-09T19:07:25Z",
+         "creator" : "kyle@nonpolynomial.com",
+         "creator_detail" : {
+            "email" : "kyle@nonpolynomial.com",
+            "id" : 424719,
+            "name" : "kyle@nonpolynomial.com",
+            "real_name" : "Kyle Machulis [:qdot]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 891492,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-12T21:18:59Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Linux",
+         "platform" : "x86_64",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Add component NFC to product Boot2Gecko",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "david.humphrey@senecacollege.ca",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "kat@mozillafoundation.org",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "david.humphrey@senecacollege.ca",
+               "id" : 250232,
+               "name" : "david.humphrey@senecacollege.ca",
+               "real_name" : "David Humphrey (:humph)"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "kat@mozillafoundation.org",
+               "id" : 467064,
+               "name" : "kat@mozillafoundation.org",
+               "real_name" : "Kat Braybrooke [:codekat]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-12T21:19:42Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 6,
+         "component" : "Administration",
+         "creation_time" : "2013-07-10T14:39:18Z",
+         "creator" : "kat@mozillafoundation.org",
+         "creator_detail" : {
+            "email" : "kat@mozillafoundation.org",
+            "id" : 467064,
+            "name" : "kat@mozillafoundation.org",
+            "real_name" : "Kat Braybrooke [:codekat]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 891887,
+         "is_cc_accessible" : true,
+         "is_confirmed" : false,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-16T13:48:24Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Add \"Editorial\" Component to Webmaker Product",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "arich@mozilla.com",
+            "bugspam.Callek@gmail.com",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "arich@mozilla.com",
+               "id" : 410064,
+               "name" : "arich@mozilla.com",
+               "real_name" : "Amy Rich [:arr] [:arich]"
+            },
+            {
+               "email" : "bugspam.Callek@gmail.com",
+               "id" : 129968,
+               "name" : "bugspam.Callek@gmail.com",
+               "real_name" : "Justin Wood (:Callek)"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-12T20:19:30Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 4,
+         "component" : "Administration",
+         "creation_time" : "2013-07-11T13:09:36Z",
+         "creator" : "dustin@mozilla.com",
+         "creator_detail" : {
+            "email" : "dustin@mozilla.com",
+            "id" : 373217,
+            "name" : "dustin@mozilla.com",
+            "real_name" : "Dustin J. Mitchell [:dustin]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 892466,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-12T20:19:30Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Linux",
+         "platform" : "x86_64",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "New \"Relops: Puppet\" component in \"Infrastructure & Operations\" product",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "juber@mozilla.com",
+            "lhenry@mozilla.com",
+            "mcote@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "juber@mozilla.com",
+               "id" : 441012,
+               "name" : "juber@mozilla.com",
+               "real_name" : "Jacques Uber [:uberj]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mcote@mozilla.com",
+               "id" : 395743,
+               "name" : "mcote@mozilla.com",
+               "real_name" : "Mark Côté [:mcote]"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-12T17:13:06Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 2,
+         "component" : "Administration",
+         "creation_time" : "2013-07-11T22:11:02Z",
+         "creator" : "nmaul@mozilla.com",
+         "creator_detail" : {
+            "email" : "nmaul@mozilla.com",
+            "id" : 409787,
+            "name" : "nmaul@mozilla.com",
+            "real_name" : "Jake Maul [:jakem]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 892729,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-12T17:13:06Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "new IT component - WebOps: Inventory",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "bugmail@wenzel.io",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "bugmail@wenzel.io",
+               "id" : 258260,
+               "name" : "bugmail@wenzel.io",
+               "real_name" : "Fred Wenzel [:wenzel]"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-17T15:33:38Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Administration",
+         "creation_time" : "2013-07-16T15:35:07Z",
+         "creator" : "jfong@mozilla.com",
+         "creator_detail" : {
+            "email" : "jfong@mozilla.com",
+            "id" : 425628,
+            "name" : "jfong@mozilla.com",
+            "real_name" : "Jen Fong-Adwent [:ednapiranha]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 894423,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-17T15:39:10Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "VERIFIED",
+         "summary" : "Add new component 'Apps' under product 'Developer Ecosystem'",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "hsteen@mozilla.com",
+            "jruderman@gmail.com",
+            "jsmith@mozilla.com",
+            "kdubost@mozilla.com",
+            "lhenry@mozilla.com",
+            "lmandel@mozilla.com",
+            "mcoggins@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "hsteen@mozilla.com",
+               "id" : 474938,
+               "name" : "hsteen@mozilla.com",
+               "real_name" : "Hallvord R. M. Steen [:hallvors]"
+            },
+            {
+               "email" : "jruderman@gmail.com",
+               "id" : 11608,
+               "name" : "jruderman@gmail.com",
+               "real_name" : "Jesse Ruderman"
+            },
+            {
+               "email" : "jsmith@mozilla.com",
+               "id" : 432443,
+               "name" : "jsmith@mozilla.com",
+               "real_name" : "Jason Smith [:jsmith]"
+            },
+            {
+               "email" : "kdubost@mozilla.com",
+               "id" : 473918,
+               "name" : "kdubost@mozilla.com",
+               "real_name" : "Karl Dubost :karlcow"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "lmandel@mozilla.com",
+               "id" : 424995,
+               "name" : "lmandel@mozilla.com",
+               "real_name" : "Lawrence Mandel [:lmandel] (use needinfo)"
+            },
+            {
+               "email" : "mcoggins@mozilla.com",
+               "id" : 451528,
+               "name" : "mcoggins@mozilla.com",
+               "real_name" : "Mark Coggins"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-22T20:00:28Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 13,
+         "component" : "Administration",
+         "creation_time" : "2013-07-18T21:10:38Z",
+         "creator" : "ck@christi3k.net",
+         "creator_detail" : {
+            "email" : "ck@christi3k.net",
+            "id" : 425073,
+            "name" : "ck@christi3k.net",
+            "real_name" : "Christie Koehler [:ckoehler]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 895622,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-22T20:00:28Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "WONTFIX",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Rename Tech Evangelism product to Web Compatibility",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "jon@mozillafoundation.org",
+            "laura@mozillafoundation.org",
+            "lhenry@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "jon@mozillafoundation.org",
+               "id" : 470566,
+               "name" : "jon@mozillafoundation.org",
+               "real_name" : "Jon Buckley [:jbuck]"
+            },
+            {
+               "email" : "laura@mozillafoundation.org",
+               "id" : 431243,
+               "name" : "laura@mozillafoundation.org",
+               "real_name" : "Laura Hilliger [:epilepticrabbit]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            }
+         ],
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-05T15:13:06Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 6,
+         "component" : "webmaker.org",
+         "creation_time" : "2013-07-19T11:58:29Z",
+         "creator" : "laura@mozillafoundation.org",
+         "creator_detail" : {
+            "email" : "laura@mozillafoundation.org",
+            "id" : 431243,
+            "name" : "laura@mozillafoundation.org",
+            "real_name" : "Laura Hilliger [:epilepticrabbit]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 895854,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-05T15:13:06Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "Webmaker",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "A little Bugzilla help?",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "unspecified",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "jmathies@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "jmathies@mozilla.com",
+               "id" : 279663,
+               "name" : "jmathies@mozilla.com",
+               "real_name" : "Jim Mathies [:jimm]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-07-30T16:10:55Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Administration",
+         "creation_time" : "2013-07-30T12:46:07Z",
+         "creator" : "jmathies@mozilla.com",
+         "creator_detail" : {
+            "email" : "jmathies@mozilla.com",
+            "id" : 279663,
+            "name" : "jmathies@mozilla.com",
+            "real_name" : "Jim Mathies [:jimm]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 899529,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-07-30T17:00:04Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "x86_64",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Create new components under product Firefox for Metro",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "josh@joshmatthews.net",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "josh@joshmatthews.net",
+               "id" : 241497,
+               "name" : "josh@joshmatthews.net",
+               "real_name" : "Josh Matthews [:jdm]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-06T23:59:38Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 4,
+         "component" : "Extensions: Needinfo",
+         "creation_time" : "2013-08-01T20:14:04Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 900652,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-06T23:59:38Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Put needinfo into the UI for new Bugzilla users",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            882548
+         ],
+         "cc" : [
+            "glob@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-09T18:40:02Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 11,
+         "component" : "Sandstone/Mozilla Skin",
+         "creation_time" : "2013-08-07T19:48:00Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 902590,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-09T18:55:43Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Improve CSS on show_bug for the Sandstone skin",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "davidwboswell@yahoo.com",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com",
+            "xelawafs@gmail.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "davidwboswell@yahoo.com",
+               "id" : 105985,
+               "name" : "davidwboswell@yahoo.com",
+               "real_name" : "David Boswell"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            },
+            {
+               "email" : "xelawafs@gmail.com",
+               "id" : 368745,
+               "name" : "xelawafs@gmail.com",
+               "real_name" : "Alex Wafula"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-15T21:56:03Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 4,
+         "component" : "Administration",
+         "creation_time" : "2013-08-15T18:24:31Z",
+         "creator" : "xelawafs@gmail.com",
+         "creator_detail" : {
+            "email" : "xelawafs@gmail.com",
+            "id" : 368745,
+            "name" : "xelawafs@gmail.com",
+            "real_name" : "Alex Wafula"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 905727,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-15T21:56:03Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Windows 7",
+         "platform" : "x86_64",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Community Building Toolkit Component",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            918369
+         ],
+         "cc" : [
+            "dkl@mozilla.com",
+            "gaye@mozilla.com",
+            "glob@mozilla.com",
+            "jgriffin@mozilla.com",
+            "jhford@mozilla.com",
+            "jlal@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "gaye@mozilla.com",
+               "id" : 466434,
+               "name" : "gaye@mozilla.com",
+               "real_name" : "Gareth Aye [:gaye] (back from PTO)"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "jgriffin@mozilla.com",
+               "id" : 347295,
+               "name" : "jgriffin@mozilla.com",
+               "real_name" : "Jonathan Griffin (:jgriffin)"
+            },
+            {
+               "email" : "jhford@mozilla.com",
+               "id" : 258126,
+               "name" : "jhford@mozilla.com",
+               "real_name" : "John Ford [:jhford] CET/CEST Berlin Time"
+            },
+            {
+               "email" : "jlal@mozilla.com",
+               "id" : 438421,
+               "name" : "jlal@mozilla.com",
+               "real_name" : "James Lal [:lightsofapollo] (inactive)"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-28T20:29:00Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 4,
+         "component" : "Administration",
+         "creation_time" : "2013-08-28T18:25:31Z",
+         "creator" : "jlal@mozilla.com",
+         "creator_detail" : {
+            "email" : "jlal@mozilla.com",
+            "id" : 438421,
+            "name" : "jlal@mozilla.com",
+            "real_name" : "James Lal [:lightsofapollo] (inactive)"
+         },
+         "depends_on" : [
+            898080
+         ],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 910377,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-09-19T16:07:41Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Please create a new Gaia:GithubBot component",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "chrismore.bugzilla@gmail.com",
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "hoosteeno@mozilla.com",
+            "jmize@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "pmac@mozilla.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "chrismore.bugzilla@gmail.com",
+               "id" : 404027,
+               "name" : "chrismore.bugzilla@gmail.com",
+               "real_name" : "Chris More [:cmore]"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "hoosteeno@mozilla.com",
+               "id" : 457796,
+               "name" : "hoosteeno@mozilla.com",
+               "real_name" : "Justin Crawford [:hoosteeno] [:jcrawford]"
+            },
+            {
+               "email" : "jmize@mozilla.com",
+               "id" : 477050,
+               "name" : "jmize@mozilla.com",
+               "real_name" : "Josh Mize [:jgmize]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "pmac@mozilla.com",
+               "id" : 432883,
+               "name" : "pmac@mozilla.com",
+               "real_name" : "Paul [:pmac] McLanahan"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-29T20:33:04Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 5,
+         "component" : "Administration",
+         "creation_time" : "2013-08-29T18:15:42Z",
+         "creator" : "hoosteeno@mozilla.com",
+         "creator_detail" : {
+            "email" : "hoosteeno@mozilla.com",
+            "id" : 457796,
+            "name" : "hoosteeno@mozilla.com",
+            "real_name" : "Justin Crawford [:hoosteeno] [:jcrawford]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 910804,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-29T20:33:04Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Can we have a \"nucleus.mozilla.org\" component in the Websites product?",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2013-08-30T18:23:23Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 3,
+         "component" : "Administration",
+         "creation_time" : "2013-08-30T17:43:39Z",
+         "creator" : "mreid@mozilla.com",
+         "creator_detail" : {
+            "email" : "mreid@mozilla.com",
+            "id" : 421860,
+            "name" : "mreid@mozilla.com",
+            "real_name" : "Mark Reid [:mreid]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 911267,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2013-08-30T18:44:19Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Linux",
+         "platform" : "x86_64",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Please create a new component for Webtools::Telemetry Server",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "justdave@mozilla.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "justdave@mozilla.com",
+               "id" : 10297,
+               "name" : "justdave@mozilla.com",
+               "real_name" : "Dave Miller [:justdave] (justdave@bugzilla.org)"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : null,
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 1,
+         "component" : "General",
+         "creation_time" : "2013-09-23T17:20:32Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 919624,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : true,
+         "keywords" : [],
+         "last_change_time" : "2013-09-23T17:20:32Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "NEW",
+         "summary" : "[Tracking bug] Deploy bugmaster community building tools",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "eshepherd@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "eshepherd@mozilla.com",
+               "id" : 241123,
+               "name" : "eshepherd@mozilla.com",
+               "real_name" : "Eric Shepherd [:sheppy]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2014-04-02T15:01:41Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 5,
+         "component" : "Administration",
+         "creation_time" : "2014-03-25T17:19:42Z",
+         "creator" : "eshepherd@mozilla.com",
+         "creator_detail" : {
+            "email" : "eshepherd@mozilla.com",
+            "id" : 241123,
+            "name" : "eshepherd@mozilla.com",
+            "real_name" : "Eric Shepherd [:sheppy]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 987844,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2014-04-02T15:01:41Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "Update components list for the Developer Documentation product",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "dkl@mozilla.com",
+            "glob@mozilla.com",
+            "lhenry@mozilla.com",
+            "mark.finkle@gmail.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "mark.finkle@gmail.com",
+               "id" : 252194,
+               "name" : "mark.finkle@gmail.com",
+               "real_name" : "Mark Finkle (:mfinkle) (use needinfo?)"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2014-04-22T02:31:38Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 6,
+         "component" : "Administration",
+         "creation_time" : "2014-04-18T22:20:54Z",
+         "creator" : "rnewman@mozilla.com",
+         "creator_detail" : {
+            "email" : "rnewman@mozilla.com",
+            "id" : 396243,
+            "name" : "rnewman@mozilla.com",
+            "real_name" : "Richard Newman [:rnewman]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 998508,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2014-04-22T02:41:02Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "VERIFIED",
+         "summary" : "New components for Firefox for Android",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            1024000
+         ],
+         "cc" : [
+            "rbillings@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "rbillings@mozilla.com",
+               "id" : 382610,
+               "name" : "rbillings@mozilla.com",
+               "real_name" : "Rebecca Billings [:rbillings]"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2014-08-28T13:51:22Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 2,
+         "component" : "Systems and Data",
+         "creation_time" : "2014-08-07T15:42:06Z",
+         "creator" : "pierros@mozilla.com",
+         "creator_detail" : {
+            "email" : "pierros@mozilla.com",
+            "id" : 356938,
+            "name" : "pierros@mozilla.com",
+            "real_name" : "Pierros Papadeas [:pierros]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 1050321,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2014-08-28T13:51:22Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Mac OS X",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "Community Building",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "[Baloo] Create One and Done conversion points",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "unspecified",
+         "votes" : 0,
+         "whiteboard" : "[Baloo][Q3]"
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            879544
+         ],
+         "cc" : [
+            "bmo2010@ilias.ca",
+            "dkl@mozilla.com",
+            "ehsan@mozilla.com",
+            "glob@mozilla.com",
+            "justdave@mozilla.com",
+            "lhenry@mozilla.com",
+            "malexis@mozilla.com",
+            "mozillamarcia.knous@gmail.com",
+            "reed@reedloden.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "bmo2010@ilias.ca",
+               "id" : 61172,
+               "name" : "bmo2010@ilias.ca",
+               "real_name" : "Chris Ilias [:cilias]"
+            },
+            {
+               "email" : "dkl@mozilla.com",
+               "id" : 5898,
+               "name" : "dkl@mozilla.com",
+               "real_name" : "David Lawrence [:dkl]"
+            },
+            {
+               "email" : "ehsan@mozilla.com",
+               "id" : 251051,
+               "name" : "ehsan@mozilla.com",
+               "real_name" : "Away, back on Nov 10"
+            },
+            {
+               "email" : "glob@mozilla.com",
+               "id" : 13647,
+               "name" : "glob@mozilla.com",
+               "real_name" : "Byron Jones ‹:glob›"
+            },
+            {
+               "email" : "justdave@mozilla.com",
+               "id" : 10297,
+               "name" : "justdave@mozilla.com",
+               "real_name" : "Dave Miller [:justdave] (justdave@bugzilla.org)"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "malexis@mozilla.com",
+               "id" : 384345,
+               "name" : "malexis@mozilla.com",
+               "real_name" : "Mike Alexis [:malexis]"
+            },
+            {
+               "email" : "mozillamarcia.knous@gmail.com",
+               "id" : 8519,
+               "name" : "mozillamarcia.knous@gmail.com",
+               "real_name" : "Marcia Knous [:marcia - use ni]"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            }
+         ],
+         "cf_due_date" : null,
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2015-01-21T02:13:09Z",
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 12,
+         "component" : "Administration",
+         "creation_time" : "2014-11-12T09:40:00Z",
+         "creator" : "floss@apjanke.net",
+         "creator_detail" : {
+            "email" : "floss@apjanke.net",
+            "id" : 507176,
+            "name" : "floss@apjanke.net",
+            "real_name" : "Andrew Janke"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 1097547,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2015-01-21T02:13:09Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "bugzilla.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "\"Editor\" (www.mozilla.org/editor) is linked to an archived page",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [
+            1027817
+         ],
+         "cc" : [
+            "jbecerra@mozilla.com",
+            "jmaher@mozilla.com",
+            "jryans@gmail.com",
+            "lhenry@mozilla.com",
+            "paul@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "jbecerra@mozilla.com",
+               "id" : 241759,
+               "name" : "jbecerra@mozilla.com",
+               "real_name" : "juan becerra [:juanb]"
+            },
+            {
+               "email" : "jmaher@mozilla.com",
+               "id" : 324370,
+               "name" : "jmaher@mozilla.com",
+               "real_name" : "Joel Maher ( :jmaher)"
+            },
+            {
+               "email" : "jryans@gmail.com",
+               "id" : 282978,
+               "name" : "jryans@gmail.com",
+               "real_name" : "J. Ryan Stinnett [:jryans] (use ni?)"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "paul@mozilla.com",
+               "id" : 174962,
+               "name" : "paul@mozilla.com",
+               "real_name" : "Paul Rouget [:paul]"
+            }
+         ],
+         "cf_crash_signature" : "",
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_has_regression_range" : "---",
+         "cf_has_str" : "---",
+         "cf_last_resolved" : "2015-01-06T00:24:37Z",
+         "cf_platform_rel" : "---",
+         "cf_qa_whiteboard" : "",
+         "cf_rank" : null,
+         "cf_status_firefox49" : "---",
+         "cf_status_firefox50" : "---",
+         "cf_status_firefox51" : "---",
+         "cf_status_firefox52" : "---",
+         "cf_status_firefox_esr45" : "---",
+         "cf_tracking_firefox49" : "---",
+         "cf_tracking_firefox50" : "---",
+         "cf_tracking_firefox51" : "---",
+         "cf_tracking_firefox52" : "---",
+         "cf_tracking_firefox_esr45" : "---",
+         "cf_tracking_firefox_relnote" : "---",
+         "cf_user_story" : "",
+         "classification" : "Client Software",
+         "comment_count" : 8,
+         "component" : "Developer Tools: WebIDE",
+         "creation_time" : "2014-12-31T18:07:19Z",
+         "creator" : "jmaher@mozilla.com",
+         "creator_detail" : {
+            "email" : "jmaher@mozilla.com",
+            "id" : 324370,
+            "name" : "jmaher@mozilla.com",
+            "real_name" : "Joel Maher ( :jmaher)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 1116802,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2015-01-06T00:24:37Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Linux",
+         "platform" : "x86",
+         "priority" : "--",
+         "product" : "Firefox",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "RESOLVED",
+         "summary" : "browser/devtools/webide/test/test_zoom.html leaves a webide window open after it is completed",
+         "target_milestone" : "Firefox 37",
+         "url" : "",
+         "version" : "unspecified",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [],
+         "cc_detail" : [],
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : null,
+         "cf_qa_whiteboard" : "",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 1,
+         "component" : "Nucleus",
+         "creation_time" : "2015-02-26T02:26:29Z",
+         "creator" : "lhenry@mozilla.com",
+         "creator_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 1137039,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : true,
+         "keywords" : [],
+         "last_change_time" : "2015-02-26T02:27:01Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "All",
+         "platform" : "All",
+         "priority" : "--",
+         "product" : "Websites",
+         "qa_contact" : "",
+         "resolution" : "",
+         "see_also" : [],
+         "severity" : "normal",
+         "status" : "NEW",
+         "summary" : "Add a button to save and continue adding notes for the same release you're currently editing",
+         "target_milestone" : "---",
+         "url" : "",
+         "version" : "unspecified",
+         "votes" : 0,
+         "whiteboard" : ""
+      },
+      {
+         "alias" : null,
+         "assigned_to" : "lhenry@mozilla.com",
+         "assigned_to_detail" : {
+            "email" : "lhenry@mozilla.com",
+            "id" : 451704,
+            "name" : "lhenry@mozilla.com",
+            "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+         },
+         "blocks" : [],
+         "cc" : [
+            "jbertsch@mozilla.com",
+            "lhenry@mozilla.com",
+            "reed@reedloden.com",
+            "rkothari@mozilla.com",
+            "sledru@mozilla.com"
+         ],
+         "cc_detail" : [
+            {
+               "email" : "jbertsch@mozilla.com",
+               "id" : 456750,
+               "name" : "jbertsch@mozilla.com",
+               "real_name" : "Jennifer Bertsch [:jbertsch]"
+            },
+            {
+               "email" : "lhenry@mozilla.com",
+               "id" : 451704,
+               "name" : "lhenry@mozilla.com",
+               "real_name" : "Liz Henry (:lizzard) (needinfo? me)"
+            },
+            {
+               "email" : "reed@reedloden.com",
+               "id" : 159758,
+               "name" : "reed@reedloden.com",
+               "real_name" : "Reed Loden [:reed] (use needinfo?)"
+            },
+            {
+               "email" : "rkothari@mozilla.com",
+               "id" : 538805,
+               "name" : "rkothari@mozilla.com",
+               "real_name" : "Ritu Kothari (:ritu)"
+            },
+            {
+               "email" : "sledru@mozilla.com",
+               "id" : 495955,
+               "name" : "sledru@mozilla.com",
+               "real_name" : "Sylvestre Ledru [:sylvestre]"
+            }
+         ],
+         "cf_blocking_fx" : "---",
+         "cf_fx_iteration" : "---",
+         "cf_fx_points" : "---",
+         "cf_last_resolved" : "2015-10-01T19:55:10Z",
+         "cf_locale" : [],
+         "cf_qa_whiteboard" : "",
+         "cf_status_firefox49" : "---",
+         "cf_status_firefox50" : "---",
+         "cf_status_firefox51" : "---",
+         "cf_status_firefox52" : "---",
+         "cf_status_firefox_esr45" : "---",
+         "cf_tracking_firefox49" : "---",
+         "cf_tracking_firefox50" : "---",
+         "cf_tracking_firefox51" : "---",
+         "cf_tracking_firefox52" : "---",
+         "cf_tracking_firefox_esr45" : "---",
+         "cf_tracking_firefox_relnote" : "---",
+         "cf_user_story" : "",
+         "classification" : "Other",
+         "comment_count" : 6,
+         "component" : "Pages & Content",
+         "creation_time" : "2015-09-30T22:52:47Z",
+         "creator" : "stephen.donner@gmail.com",
+         "creator_detail" : {
+            "email" : "stephen.donner@gmail.com",
+            "id" : 79002,
+            "name" : "stephen.donner@gmail.com",
+            "real_name" : "Stephen Donner [:stephend]"
+         },
+         "depends_on" : [],
+         "dupe_of" : null,
+         "flags" : [],
+         "groups" : [],
+         "id" : 1210216,
+         "is_cc_accessible" : true,
+         "is_confirmed" : true,
+         "is_creator_accessible" : true,
+         "is_open" : false,
+         "keywords" : [],
+         "last_change_time" : "2015-10-01T21:46:54Z",
+         "mentors" : [],
+         "mentors_detail" : [],
+         "op_sys" : "Unspecified",
+         "platform" : "Unspecified",
+         "priority" : "--",
+         "product" : "www.mozilla.org",
+         "qa_contact" : "",
+         "resolution" : "FIXED",
+         "see_also" : [],
+         "severity" : "major",
+         "status" : "VERIFIED",
+         "summary" : "Firefox 43.0a2 System Requirements page is empty",
+         "target_milestone" : "---",
+         "url" : "https://www.mozilla.org/en-US/firefox/43.0a2/system-requirements/",
+         "version" : "Production",
+         "votes" : 0,
+         "whiteboard" : ""
+      }
+   ]
+}

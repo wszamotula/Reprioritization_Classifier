@@ -1,0 +1,138 @@
+{
+   "bugs" : [
+      {
+         "alias" : null,
+         "history" : [
+            {
+               "changes" : [
+                  {
+                     "added" : "blocking4.2+, blocking4.0.3+",
+                     "field_name" : "flagtypes.name",
+                     "removed" : ""
+                  }
+               ],
+               "when" : "2011-12-03T12:37:11Z",
+               "who" : "LpSolit@gmail.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "review?(wicked@sci.fi)",
+                     "attachment_id" : 578827,
+                     "field_name" : "flagtypes.name",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "ASSIGNED",
+                     "field_name" : "status",
+                     "removed" : "NEW"
+                  },
+                  {
+                     "added" : "LpSolit@gmail.com",
+                     "field_name" : "assigned_to",
+                     "removed" : "create-and-change@bugzilla.bugs"
+                  }
+               ],
+               "when" : "2011-12-03T13:05:27Z",
+               "who" : "LpSolit@gmail.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "review-",
+                     "attachment_id" : 578827,
+                     "field_name" : "flagtypes.name",
+                     "removed" : "review?(wicked@sci.fi)"
+                  }
+               ],
+               "when" : "2011-12-06T23:20:23Z",
+               "who" : "wicked@sci.fi"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "1",
+                     "attachment_id" : 578827,
+                     "field_name" : "attachments.isobsolete",
+                     "removed" : "0"
+                  },
+                  {
+                     "added" : "review?(wicked@sci.fi)",
+                     "attachment_id" : 580226,
+                     "field_name" : "flagtypes.name",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "wicked@sci.fi",
+                     "field_name" : "cc",
+                     "removed" : ""
+                  }
+               ],
+               "when" : "2011-12-09T00:02:21Z",
+               "who" : "LpSolit@gmail.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "review+",
+                     "attachment_id" : 580226,
+                     "field_name" : "flagtypes.name",
+                     "removed" : "review?(wicked@sci.fi)"
+                  }
+               ],
+               "when" : "2011-12-15T05:30:24Z",
+               "who" : "wicked@sci.fi"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "approval4.2?, approval4.0?",
+                     "field_name" : "flagtypes.name",
+                     "removed" : ""
+                  }
+               ],
+               "when" : "2011-12-15T05:30:43Z",
+               "who" : "wicked@sci.fi"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "[doesn't affect trunk]",
+                     "field_name" : "whiteboard",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "approval4.2+, approval4.0+",
+                     "field_name" : "flagtypes.name",
+                     "removed" : "approval4.2?, approval4.0?"
+                  }
+               ],
+               "when" : "2011-12-15T07:58:31Z",
+               "who" : "LpSolit@gmail.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "RESOLVED",
+                     "field_name" : "status",
+                     "removed" : "ASSIGNED"
+                  },
+                  {
+                     "added" : "FIXED",
+                     "field_name" : "resolution",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "2011-12-15 07:20:16",
+                     "field_name" : "cf_last_resolved",
+                     "removed" : ""
+                  }
+               ],
+               "when" : "2011-12-15T15:20:16Z",
+               "who" : "LpSolit@gmail.com"
+            }
+         ],
+         "id" : 707428
+      }
+   ]
+}

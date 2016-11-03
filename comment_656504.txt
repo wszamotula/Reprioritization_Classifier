@@ -1,0 +1,149 @@
+{
+   "bugs" : {
+      "656504" : {
+         "comments" : [
+            {
+               "attachment_id" : null,
+               "author" : "LpSolit@gmail.com",
+               "bug_id" : 707428,
+               "count" : 0,
+               "creation_time" : "2011-12-03T12:37:11Z",
+               "creator" : "LpSolit@gmail.com",
+               "id" : 5890533,
+               "is_private" : false,
+               "raw_text" : "I just wrote a new Selenium script to test custom fields and the ability to show/hide custom field values based on another field value, see bug 308253, and the script fails consistently (I can reproduce manually):\n\nI have a custom drop-down field whose value 'ghost' must only be visible when the bug resolution is FIXED. So if I set the resolution to FIXED, the 'ghost' value is selectable, but when I commit changes and revisit the bug, 'ghost' is no longer selected despite the bug history says the change was successful and despite the source code of the page has selected=\"selected\". From what I can see, the problem is in handleValControllerChange() in js/field.js, because it marks this value as unselected:\n\n            if (item.selected) {\n                item.selected = false;\n                bz_fireEvent(controlled_field, 'change');\n            }\n            item.disabled = true;\n\nIf I comment // item.selected = false; then 'ghost' remains visible when revisiting the bug. This is of course not the right fix as editing the bug resolution to something else doesn't hide 'ghost' again. But this shows that some code is missing to re-select this field value on page load.\n\n\nI tested with 4.0.x and 4.1.x and I can in both cases reproduce. I'm marking this bug as blocker because the next time you edit the bug, the field value is overriden as the wrong value is selected. Also, all QA boxes are orange due to this bug.",
+               "tags" : [],
+               "text" : "I just wrote a new Selenium script to test custom fields and the ability to show/hide custom field values based on another field value, see bug 308253, and the script fails consistently (I can reproduce manually):\n\nI have a custom drop-down field whose value 'ghost' must only be visible when the bug resolution is FIXED. So if I set the resolution to FIXED, the 'ghost' value is selectable, but when I commit changes and revisit the bug, 'ghost' is no longer selected despite the bug history says the change was successful and despite the source code of the page has selected=\"selected\". From what I can see, the problem is in handleValControllerChange() in js/field.js, because it marks this value as unselected:\n\n            if (item.selected) {\n                item.selected = false;\n                bz_fireEvent(controlled_field, 'change');\n            }\n            item.disabled = true;\n\nIf I comment // item.selected = false; then 'ghost' remains visible when revisiting the bug. This is of course not the right fix as editing the bug resolution to something else doesn't hide 'ghost' again. But this shows that some code is missing to re-select this field value on page load.\n\n\nI tested with 4.0.x and 4.1.x and I can in both cases reproduce. I'm marking this bug as blocker because the next time you edit the bug, the field value is overriden as the wrong value is selected. Also, all QA boxes are orange due to this bug.",
+               "time" : "2011-12-03T12:37:11Z"
+            },
+            {
+               "attachment_id" : 578827,
+               "author" : "LpSolit@gmail.com",
+               "bug_id" : 707428,
+               "count" : 1,
+               "creation_time" : "2011-12-03T13:05:27Z",
+               "creator" : "LpSolit@gmail.com",
+               "id" : 5890547,
+               "is_private" : false,
+               "raw_text" : "",
+               "tags" : [],
+               "text" : "Created attachment 578827\npatch, v1",
+               "time" : "2011-12-03T13:05:27Z"
+            },
+            {
+               "attachment_id" : null,
+               "author" : "LpSolit@gmail.com",
+               "bug_id" : 707428,
+               "count" : 2,
+               "creation_time" : "2011-12-05T16:40:08Z",
+               "creator" : "LpSolit@gmail.com",
+               "id" : 5892948,
+               "is_private" : false,
+               "raw_text" : "Note that my patch is for 4.2 and 4.0.3 only. field.js had a major rewrite in 5.0 as part of bug 636416, so it won't apply there (and I couldn't reproduce the issue on trunk).",
+               "tags" : [],
+               "text" : "Note that my patch is for 4.2 and 4.0.3 only. field.js had a major rewrite in 5.0 as part of bug 636416, so it won't apply there (and I couldn't reproduce the issue on trunk).",
+               "time" : "2011-12-05T16:40:08Z"
+            },
+            {
+               "attachment_id" : 578827,
+               "author" : "wicked@sci.fi",
+               "bug_id" : 707428,
+               "count" : 3,
+               "creation_time" : "2011-12-06T23:20:23Z",
+               "creator" : "wicked@sci.fi",
+               "id" : 5895870,
+               "is_private" : false,
+               "raw_text" : "This affects 4.0 and 4.2 branches since for trunk, this was fixed in bug 636416. It also affects 3.4 and 3.6 branches but unless this can be considered dataloss bug we won't fix those branches..\n\nProblem seems to be that the handleValControllerChange() is called twice during initialization. First time round the else part (disable option) is executed so the Ghost-option gets disabled and second time round the if part (enable option) is executed so the option is once again enabled. Unfortunately, this also changes the selected value to a default one since the one marked selected (Ghost-option) is disabled and thus not selectable (and the if-part never restores the selection).\n\nYour change modifies this so that the if part (enable option) gets executed both times. This is redundant and affects performance slightly. That might have been acceptable but unfortunately IE now fails with error:\n\nError: Unable to delete property 'v6_cf_drop_down': object is null or undefined\n\nThis error popups twice during initialization and happens because you can't run showOptionInIE() without running hideOptionInIE() before.\n\nRather than fighting that, you should probably still protect the if-part (enable option) with the item.disabled check (just make sure it doesn't do the else part when controller item is really selected). You can take a look at bug 636416 code to see how it does this correctly.",
+               "tags" : [],
+               "text" : "Comment on attachment 578827\npatch, v1\n\nThis affects 4.0 and 4.2 branches since for trunk, this was fixed in bug 636416. It also affects 3.4 and 3.6 branches but unless this can be considered dataloss bug we won't fix those branches..\n\nProblem seems to be that the handleValControllerChange() is called twice during initialization. First time round the else part (disable option) is executed so the Ghost-option gets disabled and second time round the if part (enable option) is executed so the option is once again enabled. Unfortunately, this also changes the selected value to a default one since the one marked selected (Ghost-option) is disabled and thus not selectable (and the if-part never restores the selection).\n\nYour change modifies this so that the if part (enable option) gets executed both times. This is redundant and affects performance slightly. That might have been acceptable but unfortunately IE now fails with error:\n\nError: Unable to delete property 'v6_cf_drop_down': object is null or undefined\n\nThis error popups twice during initialization and happens because you can't run showOptionInIE() without running hideOptionInIE() before.\n\nRather than fighting that, you should probably still protect the if-part (enable option) with the item.disabled check (just make sure it doesn't do the else part when controller item is really selected). You can take a look at bug 636416 code to see how it does this correctly.",
+               "time" : "2011-12-06T23:20:23Z"
+            },
+            {
+               "attachment_id" : 580226,
+               "author" : "LpSolit@gmail.com",
+               "bug_id" : 707428,
+               "count" : 4,
+               "creation_time" : "2011-12-09T00:02:21Z",
+               "creator" : "LpSolit@gmail.com",
+               "id" : 5902756,
+               "is_private" : false,
+               "raw_text" : "This fixes the problem with IE9. No error thrown.",
+               "tags" : [],
+               "text" : "Created attachment 580226\npatch, v2\n\nThis fixes the problem with IE9. No error thrown.",
+               "time" : "2011-12-09T00:02:21Z"
+            },
+            {
+               "attachment_id" : 580226,
+               "author" : "wicked@sci.fi",
+               "bug_id" : 707428,
+               "count" : 5,
+               "creation_time" : "2011-12-15T05:30:24Z",
+               "creator" : "wicked@sci.fi",
+               "id" : 5917987,
+               "is_private" : false,
+               "raw_text" : "Not exactly what I had in mind but this is actually better, and it works as planned as well, AFAICT. :)",
+               "tags" : [],
+               "text" : "Comment on attachment 580226\npatch, v2\n\nNot exactly what I had in mind but this is actually better, and it works as planned as well, AFAICT. :)",
+               "time" : "2011-12-15T05:30:24Z"
+            },
+            {
+               "attachment_id" : null,
+               "author" : "wicked@sci.fi",
+               "bug_id" : 707428,
+               "count" : 6,
+               "creation_time" : "2011-12-15T05:56:04Z",
+               "creator" : "wicked@sci.fi",
+               "id" : 5918009,
+               "is_private" : false,
+               "raw_text" : "Oh, one thing I did notice during testing. If the controller field is changed so that the selected Ghost-option is no longer valid, it will get sneakily (especially if the Ghost-option is off the screen) changed to default and won't get changed back even if the controller field is changed back.\n\nI'm not sure if this is something we should fix on branches. This actually doesn't affect trunk, which seems to preserve the set value even if it's now invalid.",
+               "tags" : [],
+               "text" : "Oh, one thing I did notice during testing. If the controller field is changed so that the selected Ghost-option is no longer valid, it will get sneakily (especially if the Ghost-option is off the screen) changed to default and won't get changed back even if the controller field is changed back.\n\nI'm not sure if this is something we should fix on branches. This actually doesn't affect trunk, which seems to preserve the set value even if it's now invalid.",
+               "time" : "2011-12-15T05:56:04Z"
+            },
+            {
+               "attachment_id" : null,
+               "author" : "LpSolit@gmail.com",
+               "bug_id" : 707428,
+               "count" : 7,
+               "creation_time" : "2011-12-15T07:58:31Z",
+               "creator" : "LpSolit@gmail.com",
+               "id" : 5918188,
+               "is_private" : false,
+               "raw_text" : "(In reply to Teemu Mannermaa (:wicked) from comment #6)\n> Oh, one thing I did notice during testing. If the controller field is\n> changed so that the selected Ghost-option is no longer valid, it will get\n> sneakily (especially if the Ghost-option is off the screen) changed to\n> default and won't get changed back even if the controller field is changed\n> back.\n\nThis is not a regression due to my patch, right? In that case, I suggest we approve it, and a separate bug can be filed if required. Thanks for the review! :)",
+               "tags" : [],
+               "text" : "(In reply to Teemu Mannermaa (:wicked) from comment #6)\n> Oh, one thing I did notice during testing. If the controller field is\n> changed so that the selected Ghost-option is no longer valid, it will get\n> sneakily (especially if the Ghost-option is off the screen) changed to\n> default and won't get changed back even if the controller field is changed\n> back.\n\nThis is not a regression due to my patch, right? In that case, I suggest we approve it, and a separate bug can be filed if required. Thanks for the review! :)",
+               "time" : "2011-12-15T07:58:31Z"
+            },
+            {
+               "attachment_id" : null,
+               "author" : "wicked@sci.fi",
+               "bug_id" : 707428,
+               "count" : 8,
+               "creation_time" : "2011-12-15T08:19:28Z",
+               "creator" : "wicked@sci.fi",
+               "id" : 5918219,
+               "is_private" : false,
+               "raw_text" : "(In reply to Frdric Buclin from comment #7)\n> This is not a regression due to my patch, right? In that case, I suggest we\n\nYeah, it's not a regression, just something I noticed. Actually without your patch the change happens during load and with your patch during changing the controller field so it's a bit better. It's bad UX to sneakily change this but not necessarily something that has to be fixed on branches, IMO. (Or am I just trying to avoid increasing our blocker count?)",
+               "tags" : [],
+               "text" : "(In reply to Frdric Buclin from comment #7)\n> This is not a regression due to my patch, right? In that case, I suggest we\n\nYeah, it's not a regression, just something I noticed. Actually without your patch the change happens during load and with your patch during changing the controller field so it's a bit better. It's bad UX to sneakily change this but not necessarily something that has to be fixed on branches, IMO. (Or am I just trying to avoid increasing our blocker count?)",
+               "time" : "2011-12-15T08:19:28Z"
+            },
+            {
+               "attachment_id" : null,
+               "author" : "LpSolit@gmail.com",
+               "bug_id" : 707428,
+               "count" : 9,
+               "creation_time" : "2011-12-15T15:20:16Z",
+               "creator" : "LpSolit@gmail.com",
+               "id" : 5918799,
+               "is_private" : false,
+               "raw_text" : "Committing to: bzr+ssh://lpsolit%40gmail.com@bzr.mozilla.org/bugzilla/4.2/\nmodified js/field.js\nCommitted revision 7982.\n\nCommitting to: bzr+ssh://lpsolit%40gmail.com@bzr.mozilla.org/bugzilla/4.0/\nmodified js/field.js\nCommitted revision 7669.",
+               "tags" : [],
+               "text" : "Committing to: bzr+ssh://lpsolit%40gmail.com@bzr.mozilla.org/bugzilla/4.2/\nmodified js/field.js\nCommitted revision 7982.\n\nCommitting to: bzr+ssh://lpsolit%40gmail.com@bzr.mozilla.org/bugzilla/4.0/\nmodified js/field.js\nCommitted revision 7669.",
+               "time" : "2011-12-15T15:20:16Z"
+            }
+         ]
+      }
+   },
+   "comments" : {}
+}
