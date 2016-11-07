@@ -10,5 +10,10 @@ def main():
         print(json)
     return
 
+    # Example of file format:
+    # main_bug_file.txt
+    # history_1.txt
+    # comment_1.txt
+
 if __name__ == "__main__":
     main()

@@ -75,7 +75,7 @@ class Bug:
         snapshot = copy.deepcopy(self) # Could be performance hit, maybe modify current bug instead?
         new_comments = []
 
-        self.histories.reverse()
+        # self.histories.reverse()
         for history in self.histories:
             # Assuming histories are ordered most recent first
             if conv_dt(history.when) - conv_dt(self.creation_time) < timedelta(days=age):
@@ -96,11 +96,14 @@ class Bug:
         :type change: change
         """
         # TODO: Make sure this works for list types as well
-        if(type(getattr(self, change.field_name, None)) is list and change.removed == ''):
-            exec('self.' + change.field_name + '.remove(' + change.added + ')')
+        # Found an example where the name added in the history doesn't line up with the actual name in the bug
+        # Ex: History said ctalbert@mozilla.com was added to cc, actually had cmtalbert@gmail.com in cc
+        # I wonder if there are some changes that don't get caught in the history correctly, like email changes
+        #if(type(getattr(self, change.field_name, None)) is list and change.removed == ''):
+        #    exec('self.' + change.field_name + '.remove("' + change.added + '")')
 
-        else:
-            setattr(self, change.field_name, change.removed)
+        #else:
+        setattr(self, change.field_name, change.removed)
 
         return
 

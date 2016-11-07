@@ -8,7 +8,6 @@ def buildBugObjects():
     history_prefix = 'history_'
     comment_prefix = 'comment_'
 
-
     #create collection of bugs
     allBugs = Bugs()
 
@@ -22,7 +21,6 @@ def buildBugObjects():
     comment_members = [attr for attr in dir(Comment()) if not callable(attr) and not attr.startswith("__")]
     history_members = [attr for attr in dir(History()) if not callable(attr) and not attr.startswith("__")]
     change_members = [attr for attr in dir(Change()) if not callable(attr) and not attr.startswith("__")]
-
 
     #loop over all the bugs
     for curr_bug_dict in json_dict['bugs']:

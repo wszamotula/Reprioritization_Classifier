@@ -6,133 +6,122 @@
             {
                "changes" : [
                   {
-                     "added" : "blocking4.2+, blocking4.0.3+",
-                     "field_name" : "flagtypes.name",
-                     "removed" : ""
-                  }
-               ],
-               "when" : "2011-12-03T12:37:11Z",
-               "who" : "LpSolit@gmail.com"
-            },
-            {
-               "changes" : [
-                  {
-                     "added" : "review?(wicked@sci.fi)",
-                     "attachment_id" : 578827,
-                     "field_name" : "flagtypes.name",
-                     "removed" : ""
-                  },
-                  {
-                     "added" : "ASSIGNED",
-                     "field_name" : "status",
-                     "removed" : "NEW"
-                  },
-                  {
-                     "added" : "LpSolit@gmail.com",
-                     "field_name" : "assigned_to",
-                     "removed" : "create-and-change@bugzilla.bugs"
-                  }
-               ],
-               "when" : "2011-12-03T13:05:27Z",
-               "who" : "LpSolit@gmail.com"
-            },
-            {
-               "changes" : [
-                  {
-                     "added" : "review-",
-                     "attachment_id" : 578827,
-                     "field_name" : "flagtypes.name",
-                     "removed" : "review?(wicked@sci.fi)"
-                  }
-               ],
-               "when" : "2011-12-06T23:20:23Z",
-               "who" : "wicked@sci.fi"
-            },
-            {
-               "changes" : [
-                  {
-                     "added" : "1",
-                     "attachment_id" : 578827,
-                     "field_name" : "attachments.isobsolete",
-                     "removed" : "0"
-                  },
-                  {
-                     "added" : "review?(wicked@sci.fi)",
-                     "attachment_id" : 580226,
-                     "field_name" : "flagtypes.name",
-                     "removed" : ""
-                  },
-                  {
-                     "added" : "wicked@sci.fi",
-                     "field_name" : "cc",
-                     "removed" : ""
-                  }
-               ],
-               "when" : "2011-12-09T00:02:21Z",
-               "who" : "LpSolit@gmail.com"
-            },
-            {
-               "changes" : [
-                  {
-                     "added" : "review+",
-                     "attachment_id" : 580226,
-                     "field_name" : "flagtypes.name",
-                     "removed" : "review?(wicked@sci.fi)"
-                  }
-               ],
-               "when" : "2011-12-15T05:30:24Z",
-               "who" : "wicked@sci.fi"
-            },
-            {
-               "changes" : [
-                  {
-                     "added" : "approval4.2?, approval4.0?",
-                     "field_name" : "flagtypes.name",
-                     "removed" : ""
-                  }
-               ],
-               "when" : "2011-12-15T05:30:43Z",
-               "who" : "wicked@sci.fi"
-            },
-            {
-               "changes" : [
-                  {
-                     "added" : "[doesn't affect trunk]",
+                     "added" : "[good-first-bug]",
                      "field_name" : "whiteboard",
                      "removed" : ""
-                  },
-                  {
-                     "added" : "approval4.2+, approval4.0+",
-                     "field_name" : "flagtypes.name",
-                     "removed" : "approval4.2?, approval4.0?"
                   }
                ],
-               "when" : "2011-12-15T07:58:31Z",
-               "who" : "LpSolit@gmail.com"
+               "when" : "2011-09-27T23:46:43Z",
+               "who" : "k0scist@gmail.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "[good first bug]",
+                     "field_name" : "whiteboard",
+                     "removed" : "[good-first-bug]"
+                  }
+               ],
+               "when" : "2012-03-26T07:42:50Z",
+               "who" : "dao+bmo@mozilla.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "josh@joshmatthews.net",
+                     "field_name" : "cc",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "[good first bug][mentor=jhammel][lang=py]",
+                     "field_name" : "whiteboard",
+                     "removed" : "[good first bug]"
+                  }
+               ],
+               "when" : "2012-03-26T15:03:45Z",
+               "who" : "josh@joshmatthews.net"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "lhenry@mozilla.com",
+                     "field_name" : "cc",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "lhenry@mozilla.com",
+                     "field_name" : "assigned_to",
+                     "removed" : "nobody@mozilla.org"
+                  }
+               ],
+               "when" : "2012-12-18T00:03:28Z",
+               "who" : "lhenry@mozilla.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "ctalbert@mozilla.com",
+                     "field_name" : "cc",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "needinfo?(lhenry@mozilla.com)",
+                     "field_name" : "flagtypes.name",
+                     "removed" : ""
+                  }
+               ],
+               "when" : "2013-04-17T16:21:29Z",
+               "who" : "cmtalbert@gmail.com"
             },
             {
                "changes" : [
                   {
                      "added" : "RESOLVED",
                      "field_name" : "status",
-                     "removed" : "ASSIGNED"
+                     "removed" : "NEW"
                   },
                   {
-                     "added" : "FIXED",
+                     "added" : "hskupin@gmail.com",
+                     "field_name" : "cc",
+                     "removed" : ""
+                  },
+                  {
+                     "added" : "DUPLICATE",
                      "field_name" : "resolution",
                      "removed" : ""
                   },
                   {
-                     "added" : "2011-12-15 07:20:16",
+                     "added" : "",
+                     "field_name" : "whiteboard",
+                     "removed" : "[good first bug][mentor=jhammel][lang=py]"
+                  },
+                  {
+                     "added" : "",
+                     "field_name" : "flagtypes.name",
+                     "removed" : "needinfo?(lhenry@mozilla.com)"
+                  },
+                  {
+                     "added" : "2013-04-18 01:49:14",
                      "field_name" : "cf_last_resolved",
                      "removed" : ""
                   }
                ],
-               "when" : "2011-12-15T15:20:16Z",
-               "who" : "LpSolit@gmail.com"
+               "when" : "2013-04-18T08:49:14Z",
+               "who" : "hskupin@gmail.com"
+            },
+            {
+               "changes" : [
+                  {
+                     "added" : "Testing Graveyard",
+                     "field_name" : "product",
+                     "removed" : "Testing"
+                  }
+               ],
+               "when" : "2016-08-24T16:02:38Z",
+               "who" : "nobody@mozilla.org"
             }
          ],
-         "id" : 707428
+         "id" : 656504
       }
    ]
 }
