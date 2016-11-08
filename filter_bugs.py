@@ -1,31 +1,47 @@
 from datetime import datetime, timedelta
 from bug_classes import Bugs, Bug, conv_dt
 
-def main(bugs, age=7):
+
+def filtered_snapshots(bugs, cutoff_datetime):
     """
-    Filter a collection of bugs down to a collection of relevant snapshots
+    Filter a collection of bugs down to a collection of relevant snapshots for
     :param bugs: Bugs
     :param age: int
     :return: Bugs
     """
-    filtered_bugs = Bugs()
+    filtered_snapshots = Bugs()
     # un-pickle bugs? Take bugs from previous step?
 
     for id, bug in bugs.bugs.items():
-        if bug.resolution != 'FIXED':
-            continue
-        if datetime.today() - conv_dt(bug.creation_time) < timedelta(days=age):
-            continue
+        # if conv_dt(bug.last_change_time) > cutoff_datetime:
+        #    continue
         if len(bug.comments) < 5:
             continue
+        # if bug.status != 'RESOLVED':
+        #    continue
 
-        snapshot = bug.bug_snapshot(age)
+        snapshot = bug.bug_snapshot()
+        # We might want to try modifying the comment or age numberss
         if len(snapshot.comments) < 5:
             continue
-        # Should we exclude bugs that were resolved at this point?
-        if bug.resolution == 'FIXED':
+        if bug.resolution != '':
             continue
 
-        filtered_bugs.bugs[snapshot.id] = snapshot
+        filtered_snapshots.bugs[snapshot.id] = snapshot
 
-    return filtered_bugs
+    return filtered_snapshots
+
+
+def scikit_input(bugs, snapshots):
+    data = []
+    target = []
+
+    for id, snapshot in snapshots.bugs.items():
+        target.append(int(bugs.bugs[id].priority != snapshot.priority))
+
+        bug_string = snapshot.summary
+        for comment in snapshot.comments:
+            bug_string += ' ' + comment.text
+        data.append(bug_string)
+
+    return data, target

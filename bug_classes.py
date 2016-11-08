@@ -96,9 +96,11 @@ class Bug:
         :type change: change
         """
         # TODO: Make sure this works for list types as well
+
         # Found an example where the name added in the history doesn't line up with the actual name in the bug
         # Ex: History said ctalbert@mozilla.com was added to cc, actually had cmtalbert@gmail.com in cc
         # I wonder if there are some changes that don't get caught in the history correctly, like email changes
+
         #if(type(getattr(self, change.field_name, None)) is list and change.removed == ''):
         #    exec('self.' + change.field_name + '.remove("' + change.added + '")')
 
