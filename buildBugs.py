@@ -1,12 +1,14 @@
 import json
 import os
 from bug_classes import Bug, Bugs, History, Change, Comment
+import pickle
 
 def buildBugObjects():
     directory = ''
     main_bug_file = 'main_bug_file.txt'
     history_prefix = 'history_'
     comment_prefix = 'comment_'
+    output_file = 'bugsFile'
 
     #create collection of bugs
     allBugs = Bugs()
@@ -72,7 +74,9 @@ def buildBugObjects():
 
         allBugs.bugs[curr_bug.id] = curr_bug
 
-    # TODO: Pickle bugs
+    #Pickle Bugs
+    with open(os.path.join(directory,output_file),'wb') as f:
+        pickle.dump(allBugs,f)
 
     ##DEBUGGING SCRIPT TO PRINT FIRST BUG
     DEBUG = True
