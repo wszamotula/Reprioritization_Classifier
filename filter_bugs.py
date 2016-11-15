@@ -22,12 +22,13 @@ def filtered_snapshots(bugs):
 
         snapshot = bug.bug_snapshot()
         # We might want to try modifying the comment or age numberss
-        if len(snapshot.comments) < 5:
+        if len(snapshot.comments) < 3:
             continue
         if bug.resolution != '':
             continue
 
         filtered_snapshots.bugs[snapshot.id] = snapshot
+        print('Added snapshot {}'.format(snapshot.id))
 
     return filtered_snapshots
 

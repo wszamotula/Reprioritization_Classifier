@@ -4,7 +4,7 @@ from bug_classes import Bug, Bugs, History, Change, Comment
 import pickle
 
 def buildBugObjects():
-    directory = ''
+    directory = 'bugs'
     main_bug_file = 'main_bug_file.txt'
     history_prefix = 'history_'
     comment_prefix = 'comment_'
@@ -71,8 +71,8 @@ def buildBugObjects():
                         curr_history.changes.append(curr_change)
                 curr_bug.histories.append(curr_history)
 
-
         allBugs.bugs[curr_bug.id] = curr_bug
+        print('Added bug {}'.format(curr_bug_id))
 
     #Pickle Bugs
     with open(os.path.join(directory,output_file),'wb') as f:
@@ -97,25 +97,10 @@ def buildBugObjects():
                 for change_member in change_members:
                     print(change_member+": " +str(getattr(curr_change,change_member)))
 
-    snapshot = allBugs.bugs[656504].bug_snapshot()
-
-    if DEBUG == True:
+        snapshot = allBugs.bugs[656504].bug_snapshot()
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         for member in members:
             print(member+": "+str(getattr(snapshot,member)))
-        # print("PRINTING COMMENTS")
-        # for curr_comment in snapshot.comments:
-        #     print("------")
-        #     for comment_member in comment_members:
-        #         print(comment_member + ": " +str(getattr(curr_comment,comment_member)))
-        # print("PRINTING HISTORY")
-        # for curr_history in snapshot.histories:
-        #     print("-------")
-        #     print("who: " + str(curr_history.who))
-        #     print("when: "+ str(curr_history.when))
-        #     for curr_change in curr_history.changes:
-        #         for change_member in change_members:
-        #             print(change_member+": " +str(getattr(curr_change,change_member)))
 
     return allBugs
 
