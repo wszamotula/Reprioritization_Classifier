@@ -4,10 +4,14 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.naive_bayes import GaussianNB
 
 def main():
-    bugs = buildBugObjects()
-    snapshots = filtered_snapshots(bugs)
+    newData = True
+    if newData:
+        bugs = buildBugObjects()
+        snapshots = filtered_snapshots(bugs)
+        snapshot_strings, labels = scikit_input(bugs, snapshots)
+    # TODO: Load from existing data files - need to select which data we want to save/load
+
     print('Percentage of bugs kept = {}'.format(len(snapshots.bugs) / len(bugs.bugs)))
-    snapshot_strings, labels = scikit_input(bugs, snapshots)
     print('Percentage of snapshots with pri changes = {}'.format(labels.count(1)/len(snapshots.bugs)))
 
     vectorizer = CountVectorizer()
@@ -20,7 +24,7 @@ def main():
     gnb.fit(normalized_counts, labels)
     predictions = gnb.predict(normalized_counts)
 
-    # TODO: Add cross validation to estimate accuracy? Would this be bad with only 1% true classifications?
+    # TODO: Add estimations of accuracy - stratified cross validation, AUC, ...
     print("Number of mislabeled points out of a total {} points : {}".format(normalized_counts.shape[0], (labels != predictions).sum()))
 
     return
