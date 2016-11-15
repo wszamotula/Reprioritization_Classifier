@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from bug_classes import Bugs, Bug, conv_dt
 
 
-def filtered_snapshots(bugs, cutoff_datetime):
+def filtered_snapshots(bugs):
     """
     Filter a collection of bugs down to a collection of relevant snapshots for
     :param bugs: Bugs

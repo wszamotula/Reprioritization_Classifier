@@ -79,7 +79,7 @@ def buildBugObjects():
         pickle.dump(allBugs,f)
 
     ##DEBUGGING SCRIPT TO PRINT FIRST BUG
-    DEBUG = True
+    DEBUG = False
     if DEBUG == True:
         for member in members:
             print(member+": "+str(getattr(allBugs.bugs[656504],member)))
@@ -98,9 +98,9 @@ def buildBugObjects():
                     print(change_member+": " +str(getattr(curr_change,change_member)))
 
     snapshot = allBugs.bugs[656504].bug_snapshot()
-    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
     if DEBUG == True:
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         for member in members:
             print(member+": "+str(getattr(snapshot,member)))
         # print("PRINTING COMMENTS")
@@ -117,7 +117,7 @@ def buildBugObjects():
         #         for change_member in change_members:
         #             print(change_member+": " +str(getattr(curr_change,change_member)))
 
-    return
+    return allBugs
 
 if __name__ == "__main__":
     buildBugObjects()

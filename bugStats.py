@@ -25,8 +25,8 @@ def getNumPriorityChange(allBugs):
             for currChange in currHistory.changes:
                 if (currChange.field_name=="priority") and ("P" in  currChange.removed):
                     priorityChanged = 1
-                    print "[ "+str(bugID)+"] OLD: "+currChange.removed
-                    print "[ "+str(bugID)+"] NEW: "+currChange.added
+                    print("[ "+str(bugID)+"] OLD: "+currChange.removed)
+                    print("[ "+str(bugID)+"] NEW: "+currChange.added)
         if priorityChanged == 1:
             changedPriorityBugCounter = changedPriorityBugCounter + 1
     print("TOTAL BUG: "+str(totalBugCounter))
