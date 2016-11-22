@@ -34,15 +34,17 @@ def filtered_snapshots(bugs):
 
 
 def scikit_input(bugs, snapshots):
-    data = []
+    text = []
+    priorities = []
     target = []
 
     for id, snapshot in snapshots.bugs.items():
+        priorities.append(snapshot.priority)
         target.append(int(bugs.bugs[id].priority != snapshot.priority))
 
         bug_string = snapshot.summary
         for comment in snapshot.comments:
             bug_string += ' ' + comment.text
-        data.append(bug_string)
+        text.append(bug_string)
 
-    return data, target
+    return text, priorities, target

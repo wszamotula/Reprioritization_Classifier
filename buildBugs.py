@@ -24,7 +24,7 @@ def buildBugObjects():
     #open main JSON file containing all bugs
     for currFileName in fileNameArr:
         with open(os.path.join(directory,currFileName)) as f:
-            print "reading file "+currFileName
+            print("reading file " + currFileName)
             read_data = f.read()
             curr_json_dict = json.loads(read_data)
             jsonDictArr.append(curr_json_dict)
@@ -43,7 +43,7 @@ def buildBugObjects():
             for member in members:
                 if member in curr_bug_dict.keys():
                     setattr(curr_bug,member,curr_bug_dict[member])
-    
+
             #if we could not set the bug id there is a problem and we should not add bug to collection
             curr_bug_id = curr_bug.id
             if not curr_bug_id > 0:
@@ -59,10 +59,10 @@ def buildBugObjects():
                     curr_comment = Comment()
                     for comment_member in comment_members:
                         if comment_member in curr_comment_dict.keys():
-                            setattr(curr_comment,comment_member,curr_comment_dict[comment_member])                        
+                            setattr(curr_comment,comment_member,curr_comment_dict[comment_member])
                     curr_bug.comments.append(curr_comment)
 
-        #open the associated history file if it exists
+                    #open the associated history file if it exists
             history_fname = os.path.join(directory,history_prefix+str(curr_bug_id)+'.txt')
             if os.path.isfile(history_fname):
                 with open(history_fname) as f:
@@ -87,10 +87,11 @@ def buildBugObjects():
             if DEBUG == True:
                 print('Added bug {}'.format(curr_bug_id))
 
-    #Pickle Bugs
         print("Total bugs after parsing file:"+str(len(allBugs.bugs.keys())))
-        with open(os.path.join(directory,output_file),'wb') as f:
-            pickle.dump(allBugs,f)
+
+    #Pickle Bugs
+    with open(os.path.join(directory,output_file),'wb') as f:
+        pickle.dump(allBugs,f)
 
     ##DEBUGGING SCRIPT TO PRINT FIRST BUG
     if DEBUG == True:
