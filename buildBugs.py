@@ -5,6 +5,7 @@ import pickle
 
 def buildBugObjects():
     directory = 'bugs'
+    main_bug_directory = 'main_bug_file'
     main_bug_file_prefix = 'main_bug_file'
     history_prefix = 'history_'
     comment_prefix = 'comment_'
@@ -12,19 +13,22 @@ def buildBugObjects():
     num_Files = 4
     fileNameArr = []
     jsonDictArr = []
+    subdir_Arr = ['Part1','Part2','Part3','Part4','Part5']
     DEBUG = False
+    
 
     #build list of files
     for idx in range(num_Files):
-        fileNameArr.append(main_bug_file_prefix+str(idx)+".txt")
+        fileNameArr.append(os.path.join(main_bug_directory,main_bug_file_prefix+str(idx+1)+".txt"))
 
+    print fileNameArr
     #create collection of bugs
     allBugs = Bugs()
 
     #open main JSON file containing all bugs
     for currFileName in fileNameArr:
         with open(os.path.join(directory,currFileName)) as f:
-            print("reading file " + currFileName)
+            print "reading file "+currFileName
             read_data = f.read()
             curr_json_dict = json.loads(read_data)
             jsonDictArr.append(curr_json_dict)
@@ -43,55 +47,56 @@ def buildBugObjects():
             for member in members:
                 if member in curr_bug_dict.keys():
                     setattr(curr_bug,member,curr_bug_dict[member])
-
+    
             #if we could not set the bug id there is a problem and we should not add bug to collection
             curr_bug_id = curr_bug.id
             if not curr_bug_id > 0:
                 break
 
             #open the associated comment file if it exists
-            comment_fname = os.path.join(directory,comment_prefix+str(curr_bug_id)+'.txt')
-            if os.path.isfile(comment_fname):
-                with open(comment_fname) as f:
-                    comment_read_data = f.read()
-                    comment_json_dict = json.loads(comment_read_data)
-                for curr_comment_dict in  comment_json_dict['bugs'][str(curr_bug_id)]['comments']:
-                    curr_comment = Comment()
-                    for comment_member in comment_members:
-                        if comment_member in curr_comment_dict.keys():
-                            setattr(curr_comment,comment_member,curr_comment_dict[comment_member])
-                    curr_bug.comments.append(curr_comment)
+            for curr_directory in subdir_Arr:
+                comment_fname = os.path.join(directory,curr_directory,comment_prefix+str(curr_bug_id)+'.txt')
+                if os.path.isfile(comment_fname):
+                    with open(comment_fname) as f:
+                        comment_read_data = f.read()
+                        comment_json_dict = json.loads(comment_read_data)
+                    for curr_comment_dict in  comment_json_dict['bugs'][str(curr_bug_id)]['comments']:
+                        curr_comment = Comment()
+                        for comment_member in comment_members:
+                            if comment_member in curr_comment_dict.keys():
+                                setattr(curr_comment,comment_member,curr_comment_dict[comment_member])                        
+                        curr_bug.comments.append(curr_comment)
 
-                    #open the associated history file if it exists
-            history_fname = os.path.join(directory,history_prefix+str(curr_bug_id)+'.txt')
-            if os.path.isfile(history_fname):
-                with open(history_fname) as f:
-                    history_read_data = f.read()
-                    history_json_dict = json.loads(history_read_data)
-                for curr_history_dict in history_json_dict['bugs'][0]['history']:
-                    curr_history = History()
-                    if 'when' in curr_history_dict.keys():
-                        curr_history.when = curr_history_dict['when']
-                    if 'who' in curr_history_dict.keys():
-                        curr_history.who = curr_history_dict['who']
-                    if 'changes' in curr_history_dict.keys():
-                        for curr_change_dict in curr_history_dict['changes']:
-                            curr_change = Change()
-                            for change_member in change_members:
-                                if change_member in curr_change_dict.keys():
-                                    setattr(curr_change,change_member,curr_change_dict[change_member])
-                            curr_history.changes.append(curr_change)
-                    curr_bug.histories.append(curr_history)
+            #open the associated history file if it exists
+            for curr_directory in subdir_Arr:
+                history_fname = os.path.join(directory,curr_directory,history_prefix+str(curr_bug_id)+'.txt')
+                if os.path.isfile(history_fname):
+                    with open(history_fname) as f:
+                        history_read_data = f.read()
+                        history_json_dict = json.loads(history_read_data)
+                    for curr_history_dict in history_json_dict['bugs'][0]['history']:
+                        curr_history = History()
+                        if 'when' in curr_history_dict.keys():
+                            curr_history.when = curr_history_dict['when']
+                        if 'who' in curr_history_dict.keys():
+                            curr_history.who = curr_history_dict['who']
+                        if 'changes' in curr_history_dict.keys():
+                            for curr_change_dict in curr_history_dict['changes']:
+                                curr_change = Change()
+                                for change_member in change_members:
+                                    if change_member in curr_change_dict.keys():
+                                        setattr(curr_change,change_member,curr_change_dict[change_member])
+                                curr_history.changes.append(curr_change)
+                        curr_bug.histories.append(curr_history)
 
             allBugs.bugs[curr_bug.id] = curr_bug
             if DEBUG == True:
                 print('Added bug {}'.format(curr_bug_id))
 
-        print("Total bugs after parsing file:" + str(len(allBugs.bugs.keys())))
-
     #Pickle Bugs
-    with open(os.path.join(directory,output_file),'wb') as f:
-        pickle.dump(allBugs,f)
+        print("Total bugs after parsing file:"+str(len(allBugs.bugs.keys())))
+        with open(os.path.join(directory,output_file),'wb') as f:
+            pickle.dump(allBugs,f)
 
     ##DEBUGGING SCRIPT TO PRINT FIRST BUG
     if DEBUG == True:
@@ -116,8 +121,7 @@ def buildBugObjects():
         for member in members:
             print(member+": "+str(getattr(snapshot,member)))
 
-    #return allBugs
-    return
+    return allBugs
 
 if __name__ == "__main__":
     buildBugObjects()
