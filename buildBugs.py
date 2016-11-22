@@ -87,7 +87,7 @@ def buildBugObjects():
             if DEBUG == True:
                 print('Added bug {}'.format(curr_bug_id))
 
-        print("Total bugs after parsing file:"+str(len(allBugs.bugs.keys())))
+        print("Total bugs after parsing file:" + str(len(allBugs.bugs.keys())))
 
     #Pickle Bugs
     with open(os.path.join(directory,output_file),'wb') as f:

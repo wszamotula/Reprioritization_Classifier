@@ -14,7 +14,7 @@ def main():
     else:
         directory = 'bugs'
         filename = 'bugsFile'
-        bugs = pickle.load(open(os.path.join(directory,filename), 'rb'))
+        bugs = pickle.load(open(os.path.join(directory, filename), 'rb'))
         # TODO: Should we also pickle the snapshot data?
 
     snapshots = filtered_snapshots(bugs)
@@ -27,8 +27,10 @@ def main():
     counts = vectorizer.fit_transform(snapshot_strings)
 
     transformer = TfidfTransformer()
-    # TODO: Add the priority to the normalized counts (input to NB)
     normalized_counts = transformer.fit_transform(counts).toarray()
+
+    for idx, pri in enumerate(priorities):
+        normalized_counts[idx].append(pri)
 
     # TODO: Should we switch to logistic regression to better cope with "rare disease" problem?
     gnb = GaussianNB()
