@@ -55,7 +55,7 @@ def buildBugObjects():
 
             #open the associated comment file if it exists
             for curr_directory in subdir_Arr:
-                comment_fname = os.path.join(curr_directory,comment_prefix+str(curr_bug_id)+'.txt')
+                comment_fname = os.path.join(directory,curr_directory,comment_prefix+str(curr_bug_id)+'.txt')
                 if os.path.isfile(comment_fname):
                     with open(comment_fname) as f:
                         comment_read_data = f.read()
@@ -69,7 +69,7 @@ def buildBugObjects():
 
             #open the associated history file if it exists
             for curr_directory in subdir_Arr:
-                history_fname = os.path.join(curr_directory,history_prefix+str(curr_bug_id)+'.txt')
+                history_fname = os.path.join(directory,curr_directory,history_prefix+str(curr_bug_id)+'.txt')
                 if os.path.isfile(history_fname):
                     with open(history_fname) as f:
                         history_read_data = f.read()
@@ -121,8 +121,7 @@ def buildBugObjects():
         for member in members:
             print(member+": "+str(getattr(snapshot,member)))
 
-    #return allBugs
-    return
+    return allBugs
 
 if __name__ == "__main__":
     buildBugObjects()
