@@ -21,14 +21,14 @@ def buildBugObjects():
     for idx in range(num_Files):
         fileNameArr.append(os.path.join(main_bug_directory,main_bug_file_prefix+str(idx+1)+".txt"))
 
-    print fileNameArr
+    print(fileNameArr)
     #create collection of bugs
     allBugs = Bugs()
 
     #open main JSON file containing all bugs
     for currFileName in fileNameArr:
         with open(os.path.join(directory,currFileName)) as f:
-            print "reading file "+currFileName
+            print("reading file "+currFileName)
             read_data = f.read()
             curr_json_dict = json.loads(read_data)
             jsonDictArr.append(curr_json_dict)

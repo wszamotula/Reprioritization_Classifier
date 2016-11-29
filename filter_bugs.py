@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from bug_classes import Bugs, Bug, conv_dt
-
+import os
+import pickle
 
 def filtered_snapshots(bugs):
     """
@@ -28,7 +29,10 @@ def filtered_snapshots(bugs):
             continue
 
         filtered_snapshots.bugs[snapshot.id] = snapshot
-        print('Added snapshot {}'.format(snapshot.id))
+        # print('Added snapshot {}'.format(snapshot.id))
+
+    with open(os.path.join('bugs', 'snapshotFile'), 'wb') as f:
+        pickle.dump(filtered_snapshots, f)
 
     return filtered_snapshots
 
