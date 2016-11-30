@@ -1,0 +1,128 @@
+import sys
+import os
+import numpy
+from buildBugs import buildBugObjects
+from filter_bugs import filtered_snapshots, scikit_input
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import cross_val_score, cross_val_predict
+from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import roc_curve, auc
+from sklearn.model_selection import StratifiedKFold
+from scipy import interp
+import matplotlib.pyplot as plt
+import pickle
+
+
+def main(newData=1):
+    newData = 0 #Use existing data
+    if newData == 1:
+        bugs = buildBugObjects()
+        snapshots = filtered_snapshots(bugs)
+    else:
+        directory = 'bugs'
+        bug_file = 'bugsFile'
+        snapshot_file = 'snapshotFile'
+        bugs = pickle.load(open(os.path.join(directory, bug_file), 'rb'))
+        snapshots = pickle.load(open(os.path.join(directory, snapshot_file), 'rb'))
+
+    snapshot_strings, priorities, labels = scikit_input(bugs, snapshots)
+
+    print('Percentage of bugs kept = {}'.format(float(len(snapshots.bugs)) / float(len(bugs.bugs))))
+    print('Percentage of snapshots with pri changes = {}'.format(float(labels.count(1)) / float(len(snapshots.bugs))))
+
+    vectorizer = CountVectorizer()
+    counts = vectorizer.fit_transform(snapshot_strings)
+
+    transformer = TfidfTransformer()
+    normalized_counts = transformer.fit_transform(counts) #.toarray()
+
+    for idx, pri in enumerate(priorities):
+        numpy.append(normalized_counts[idx], pri)
+
+    # TODO: Should we switch to logistic regression to better cope with "rare disease" problem?
+    gnb = GaussianNB()
+    # gnb.fit(normalized_counts, labels)
+    # predictions = gnb.predict(normalized_counts)
+    bugs = None
+    snapshots = None
+
+    scores = cross_val_score(gnb, normalized_counts.toarray(), labels, cv=10)
+    
+    
+    
+    #predictions=cross_val_predict(gnb, normalized_counts.toarray(), labels, cv=10)
+    #print(predictions)
+
+    #precision,recall,thresh=precision_recall_curve(labels,predictions)
+
+    print("the len of the scores is "+str(len(scores)))
+    #print("the len of the predictions is"+str(len(predictions)))
+    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+    
+    # Run classifier with cross-validation and plot ROC curves
+    cv = StratifiedKFold(n_splits=10)
+    classifier = GaussianNB()
+    
+    X = normalized_counts.toarray()
+    y = labels
+    
+    print len(X)
+    print len(y)
+    
+    print X
+    print y
+
+    mean_tpr = 0.0
+    mean_fpr = numpy.linspace(0, 1, 100)
+
+    #colors = cycle(['cyan', 'indigo', 'seagreen', 'yellow', 'blue', 'darkorange'])
+    lw = 2
+
+    i = 0
+    for (train, test) in cv.split(X, y):
+        #print "type of trian"
+        #print type(train)
+        #print "-----"
+        #print X[train]
+        #print "train"
+        #print train
+
+        #print "small test"
+        #getThis = [1, 3, 5]
+        #print "Type of get this"
+        #print type(getThis)
+        #print "hhhh"
+        #print [y[i] for i in getThis]
+        #a = 1
+        classifier.fit(X[train], [y[i] for i in train])
+        probas_=classifier.predict_proba(X[test])
+        fpr, tpr, thresholds = roc_curve([y[i] for i in test], probas_[:, 1])
+        mean_tpr += interp(mean_fpr, fpr, tpr)
+        mean_tpr[0] = 0.0
+        roc_auc = auc(fpr, tpr)
+        #plt.plot(fpr, tpr, lw=lw, color=color,label='ROC fold %d (area = %0.2f)' % (i, roc_auc))
+        i += 1
+
+    plt.plot([0, 1], [0, 1], linestyle='--', lw=lw, color='k',label='Luck')
+
+    mean_tpr /= float(cv.get_n_splits(X, y))
+    mean_tpr[-1] = 1.0
+    mean_auc = auc(mean_fpr, mean_tpr)
+    plt.plot(mean_fpr, mean_tpr, color='g', linestyle='--',label='Mean ROC (area = %0.2f)' % mean_auc, lw=lw)
+
+    plt.xlim([-0.05, 1.05])
+    plt.ylim([-0.05, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver operating characteristic example')
+    plt.legend(loc="lower right")
+    plt.show()
+
+    return
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        main(sys.argv[1])
+    else:
+        main()
