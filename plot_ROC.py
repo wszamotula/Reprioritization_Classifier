@@ -1,6 +1,7 @@
 import sys
 import os
 import numpy
+from sklearn.linear_model import LogisticRegression
 from buildBugs import buildBugObjects
 from filter_bugs import filtered_snapshots, scikit_input
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
@@ -63,7 +64,7 @@ def main(newData=1):
     # Run classifier with cross-validation and plot ROC curves
     cv = StratifiedKFold(n_splits=10)
     classifier = MultinomialNB()
-    
+    #classifier = LogisticRegression()
     X = normalized_counts.toarray()
     y = labels
     print("total pos label" +str(sum(y)))
@@ -107,46 +108,44 @@ def main(newData=1):
     psb_fpr,psb_tpr,psb_thresh_auc = roc_curve(all_labels,all_probas)
     psb_roc_auc_score = roc_auc_score(all_labels,all_probas)
 
-    plt.plot([0, 1], [0, 1], linestyle='--', lw=lw, color='k')
+    #mean_tpr /= float(cv.get_n_splits(X, y))
+    #mean_tpr[-1] = 1.0
+    #mean_auc = auc(mean_fpr, mean_tpr)
+    #plt.plot(mean_fpr, mean_tpr, color='g', linestyle='--',label='Mean ROC (area = %0.2f)' % mean_auc, lw=lw)
 
-
-
-    mean_tpr /= float(cv.get_n_splits(X, y))
-    mean_tpr[-1] = 1.0
-    mean_auc = auc(mean_fpr, mean_tpr)
-    plt.plot(mean_fpr, mean_tpr, color='g', linestyle='--',label='Mean ROC (area = %0.2f)' % mean_auc, lw=lw)
-
-    plt.xlim([-0.05, 1.05])
-    plt.ylim([-0.05, 1.05])
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('True Positive Rate')
-    plt.title('EXAMPLE CODE AVG CURVES Receiver operating characteristic example')
-    plt.legend(loc="lower right")
-    plt.show()
+    #plt.xlim([-0.05, 1.05])
+    #plt.ylim([-0.05, 1.05])
+    #plt.xlabel('False Positive Rate')
+    #plt.ylabel('True Positive Rate')
+    #plt.title('EXAMPLE CODE AVG CURVES Receiver operating characteristic example')
+    #plt.legend(loc="lower right")
+    #plt.show()
 
 
     AUPRC = auc(psb_recall,psb_precision)
-    plt.plot(psb_recall,psb_precision,label ='auprc = '+str(AUPRC))
+    plt.plot(psb_recall,psb_precision,label ='AUPRC = '+str(AUPRC))
     plt.xlim([-0.05, 1.05])
     plt.ylim([-0.05, 1.05])
     plt.xlabel('Recall')
     plt.ylabel('Precision')
-    plt.title('COMBINE DATASETS Precision Recall Curve')
+    plt.title('Precision Recall Curve')
     plt.legend(loc="lower right")
     plt.show()
 
-    plt.plot(psb_fpr,psb_tpr)
+    plt.plot(psb_fpr,psb_tpr, label = 'AUROC = '+str(psb_roc_auc_score))
+    plt.plot([0, 1], [0, 1], linestyle='--', lw=lw, color='k')
     plt.xlim([-0.05, 1.05])
     plt.ylim([-0.05, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('COMBINE DATASETS ROC Curve')
+    plt.title('Receiver Operating Characteristic Curve')
     plt.legend(loc="lower right")
     plt.show()
 
-    print("out of bag ROC:"+psb_roc_auc_score)
-    print("avergae of curves: "+ mean_auc)
-    print("area under P-R curve"+AUPRC)
+    print("Multinomial NB")
+    print("out of bag ROC:"+str(psb_roc_auc_score))
+    print("avergae of curves: "+str(mean_auc))
+    print("area under P-R curve"+str(AUPRC))
     return
 
 if __name__ == "__main__":
