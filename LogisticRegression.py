@@ -2,11 +2,16 @@ import sklearn.linear_model as lm
 from sklearn import svm
 import numpy as np
 from sklearn.model_selection import KFold
+import matplotlib.pyplot as plt
+import pylab as pl
 
 
 def LogisticRegression_CV(normalized_counts, labels, criterion):
     precision = []
     recall = []
+    FPR =[]
+    TPR = []
+    criterion = criterion/100.0
     kf = KFold(n_splits=10)
     for train, test in kf.split(normalized_counts):
         Train_normalized_counts = [normalized_counts[i] for i in list(train)]
@@ -50,7 +55,14 @@ def LogisticRegression_CV(normalized_counts, labels, criterion):
             precision.append(a22 / float(a22 + a21))
         if((a22+a12) != 0):
             recall.append(a22 / float(a22 + a12))
+        FPR.append(a21 / float(a21 + a11))
+        TPR.append(a22 / float(a22 + a12))
     average_precision = sum(precision) / float(len(precision))
     print('Average Precision is ' + str(average_precision))
     average_recall = sum(recall) / float(len(recall))
     print('Average Recall is ' + str(average_recall))
+    average_FPR = sum(FPR) / float(len(FPR))
+    print('Average FPR is ' + str(average_FPR))
+    average_TPR = sum(TPR) / float(len(TPR))
+    print('Average TPR is ' + str(average_TPR))
+    return average_FPR,average_TPR

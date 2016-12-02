@@ -9,6 +9,8 @@ from sklearn import svm
 import numpy as np
 from sklearn.model_selection import KFold
 from LogisticRegression import LogisticRegression_CV
+import matplotlib.pyplot as plt
+import pylab as pl
 
 def main():
     newData = False
@@ -36,11 +38,20 @@ def main():
     # TODO: Add the priority to the normalized counts (input to NB)
     normalized_counts = transformer.fit_transform(counts).toarray()
 
-    LogisticRegression_CV(normalized_counts, labels, 0.10)
-    LogisticRegression_CV(normalized_counts, labels, 0.20)
-    LogisticRegression_CV(normalized_counts, labels, 0.30)
-    LogisticRegression_CV(normalized_counts, labels, 0.40)
-    LogisticRegression_CV(normalized_counts, labels, 0.50)
+
+    FPR = []
+    TPR = []
+
+    for criterion in range(5,50,2):
+        FPR1,TPR1 = LogisticRegression_CV(normalized_counts, labels, criterion)
+        FPR.append(FPR1)
+        TPR.append(TPR1)
+
+    print(FPR,TPR)
+    pl.plot(FPR, TPR)
+    # show the plot on the screen
+    pl.show()
+
 
     # TODO: Should we switch to logistic regression to better cope with "rare disease" problem?
     #gnb = GaussianNB()
