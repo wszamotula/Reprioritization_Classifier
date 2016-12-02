@@ -1,7 +1,7 @@
 import sklearn.linear_model as lm
 from sklearn import svm
 import numpy as np
-from sklearn.model_selection import KFold
+from sklearn.model_selection import StratifiedKFold
 import matplotlib.pyplot as plt
 import pylab as pl
 
@@ -12,8 +12,8 @@ def LogisticRegression_CV(normalized_counts, labels, criterion):
     FPR =[]
     TPR = []
     criterion = criterion/100.0
-    kf = KFold(n_splits=10)
-    for train, test in kf.split(normalized_counts):
+    kf = StratifiedKFold(n_splits=10)
+    for train, test in kf.split(normalized_counts,labels):
         Train_normalized_counts = [normalized_counts[i] for i in list(train)]
         Train_labels = [labels[i] for i in list(train)]
         Test_normalized_counts = [normalized_counts[i] for i in list(test)]
@@ -47,10 +47,6 @@ def LogisticRegression_CV(normalized_counts, labels, criterion):
                 a21 = a21 + 1
             if ((Test_labels[i] == 1) and (Predict_Label1[i] == 1)):
                 a22 = a22 + 1
-        print('TN = ' + str(a11))
-        print('FN = ' + str(a12))
-        print('FP = ' + str(a21))
-        print('TP = ' + str(a22))
         if((a22+a21) != 0):
             precision.append(a22 / float(a22 + a21))
         if((a22+a12) != 0):
@@ -65,4 +61,4 @@ def LogisticRegression_CV(normalized_counts, labels, criterion):
     print('Average FPR is ' + str(average_FPR))
     average_TPR = sum(TPR) / float(len(TPR))
     print('Average TPR is ' + str(average_TPR))
-    return average_FPR,average_TPR
+    return average_FPR,average_TPR, average_precision, average_recall
