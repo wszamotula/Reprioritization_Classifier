@@ -66,9 +66,9 @@ def main(newData=1):
     
     X = normalized_counts.toarray()
     y = labels
-    print "total pos label" +str(sum(y))
-    print "The number of elements in X is "+str(len(X))
-    print "The number of elements in y is "+str(len(y))
+    print("total pos label" +str(sum(y)))
+    print("The number of elements in X is "+str(len(X)))
+    print("The number of elements in y is "+str(len(y)))
     
     #print X
     #print y
@@ -144,9 +144,9 @@ def main(newData=1):
     plt.legend(loc="lower right")
     plt.show()
 
-    print psb_roc_auc_score
-    print mean_auc
-
+    print("out of bag ROC:"+psb_roc_auc_score)
+    print("avergae of curves: "+ mean_auc)
+    print("area under P-R curve"+AUPRC)
     return
 
 if __name__ == "__main__":
