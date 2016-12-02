@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.naive_bayes import GaussianNB,MultinomialNB
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import roc_curve, auc
+from sklearn.metrics import roc_curve, auc, roc_auc_score
 from sklearn.model_selection import StratifiedKFold
 from scipy import interp
 import matplotlib.pyplot as plt
@@ -80,20 +80,36 @@ def main(newData=1):
     lw = 2
 
     i = 0
+
+    all_probas = []
+    all_labels = []
     #confirmed that this is going through 10 loops as expected
     #confirmed that probas is only returning 1 or 0 rather than other confidences
     for (train, test) in cv.split(X, y):
         classifier.fit(X[train], [y[j] for j in train])
         probas_=classifier.predict_proba(X[test])
+
+        all_probas.extend(probas_[:, 1])
+        all_labels.extend([y[m] for m in test])
+
         #print probas_[:100]
-        fpr, tpr, thresholds = roc_curve([y[j] for j in test], probas_[:, 1])
+        fpr, tpr, thresholds = roc_curve([y[k] for k in test], probas_[:, 1])
         mean_tpr += interp(mean_fpr, fpr, tpr)
         mean_tpr[0] = 0.0
         roc_auc = auc(fpr, tpr)
         #plt.plot(fpr, tpr, lw=lw,label='ROC fold %d (area = %0.2f)' % (i, roc_auc))
         i += 1
 
+    #print all_labels
+    #print all_probas
+
+    psb_precision,psb_recall,psb_thresholds = precision_recall_curve(all_labels,all_probas)
+    psb_fpr,psb_tpr,psb_thresh_auc = roc_curve(all_labels,all_probas)
+    psb_roc_auc_score = roc_auc_score(all_labels,all_probas)
+
     plt.plot([0, 1], [0, 1], linestyle='--', lw=lw, color='k')
+
+
 
     mean_tpr /= float(cv.get_n_splits(X, y))
     mean_tpr[-1] = 1.0
@@ -104,9 +120,32 @@ def main(newData=1):
     plt.ylim([-0.05, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic example')
+    plt.title('EXAMPLE CODE AVG CURVES Receiver operating characteristic example')
     plt.legend(loc="lower right")
     plt.show()
+
+
+    AUPRC = auc(psb_recall,psb_precision)
+    plt.plot(psb_recall,psb_precision,label ='auprc = '+str(AUPRC))
+    plt.xlim([-0.05, 1.05])
+    plt.ylim([-0.05, 1.05])
+    plt.xlabel('Recall')
+    plt.ylabel('Precision')
+    plt.title('COMBINE DATASETS Precision Recall Curve')
+    plt.legend(loc="lower right")
+    plt.show()
+
+    plt.plot(psb_fpr,psb_tpr)
+    plt.xlim([-0.05, 1.05])
+    plt.ylim([-0.05, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('COMBINE DATASETS ROC Curve')
+    plt.legend(loc="lower right")
+    plt.show()
+
+    print psb_roc_auc_score
+    print mean_auc
 
     return
 
