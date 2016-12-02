@@ -4,7 +4,7 @@ import numpy
 from buildBugs import buildBugObjects
 from filter_bugs import filtered_snapshots, scikit_input
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import GaussianNB,MultinomialNB
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import roc_curve, auc
@@ -41,13 +41,13 @@ def main(newData=1):
         numpy.append(normalized_counts[idx], pri)
 
     # TODO: Should we switch to logistic regression to better cope with "rare disease" problem?
-    gnb = GaussianNB()
+    mnb = MultinomialNB()
     # gnb.fit(normalized_counts, labels)
     # predictions = gnb.predict(normalized_counts)
     bugs = None
     snapshots = None
 
-    scores = cross_val_score(gnb, normalized_counts.toarray(), labels, cv=10)
+    scores = cross_val_score(mnb, normalized_counts.toarray(), labels, cv=10)
     
     
     
@@ -62,16 +62,16 @@ def main(newData=1):
     
     # Run classifier with cross-validation and plot ROC curves
     cv = StratifiedKFold(n_splits=10)
-    classifier = GaussianNB()
+    classifier = MultinomialNB()
     
     X = normalized_counts.toarray()
     y = labels
+    print "total pos label" +str(sum(y))
+    print "The number of elements in X is "+str(len(X))
+    print "The number of elements in y is "+str(len(y))
     
-    print len(X)
-    print len(y)
-    
-    print X
-    print y
+    #print X
+    #print y
 
     mean_tpr = 0.0
     mean_fpr = numpy.linspace(0, 1, 100)
@@ -80,31 +80,20 @@ def main(newData=1):
     lw = 2
 
     i = 0
+    #confirmed that this is going through 10 loops as expected
+    #confirmed that probas is only returning 1 or 0 rather than other confidences
     for (train, test) in cv.split(X, y):
-        #print "type of trian"
-        #print type(train)
-        #print "-----"
-        #print X[train]
-        #print "train"
-        #print train
-
-        #print "small test"
-        #getThis = [1, 3, 5]
-        #print "Type of get this"
-        #print type(getThis)
-        #print "hhhh"
-        #print [y[i] for i in getThis]
-        #a = 1
-        classifier.fit(X[train], [y[i] for i in train])
+        classifier.fit(X[train], [y[j] for j in train])
         probas_=classifier.predict_proba(X[test])
-        fpr, tpr, thresholds = roc_curve([y[i] for i in test], probas_[:, 1])
+        #print probas_[:100]
+        fpr, tpr, thresholds = roc_curve([y[j] for j in test], probas_[:, 1])
         mean_tpr += interp(mean_fpr, fpr, tpr)
         mean_tpr[0] = 0.0
         roc_auc = auc(fpr, tpr)
-        #plt.plot(fpr, tpr, lw=lw, color=color,label='ROC fold %d (area = %0.2f)' % (i, roc_auc))
+        #plt.plot(fpr, tpr, lw=lw,label='ROC fold %d (area = %0.2f)' % (i, roc_auc))
         i += 1
 
-    plt.plot([0, 1], [0, 1], linestyle='--', lw=lw, color='k',label='Luck')
+    plt.plot([0, 1], [0, 1], linestyle='--', lw=lw, color='k')
 
     mean_tpr /= float(cv.get_n_splits(X, y))
     mean_tpr[-1] = 1.0
