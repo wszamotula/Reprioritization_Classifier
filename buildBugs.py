@@ -2,8 +2,10 @@ import json
 import os
 from bug_classes import Bug, Bugs, History, Change, Comment
 import pickle
+from collections import defaultdict
 
 def buildBugObjects():
+    print_Counter=0
     directory = 'bugs'
     main_bug_directory = 'main_bug_file'
     main_bug_file_prefix = 'main_bug_file'
@@ -15,20 +17,23 @@ def buildBugObjects():
     jsonDictArr = []
     subdir_Arr = ['Part1','Part2','Part3','Part4','Part5']
     DEBUG = False
-    
+    resolutionDict = defaultdict(int)
+    priorityDict = defaultdict(int)
+    commentTotalDict = defaultdict(int)
+    severityDict = defaultdict(int)
 
     #build list of files
     for idx in range(num_Files):
         fileNameArr.append(os.path.join(main_bug_directory,main_bug_file_prefix+str(idx+1)+".txt"))
 
-    print(fileNameArr)
+    print fileNameArr
     #create collection of bugs
     allBugs = Bugs()
 
     #open main JSON file containing all bugs
     for currFileName in fileNameArr:
         with open(os.path.join(directory,currFileName)) as f:
-            print("reading file "+currFileName)
+            print "reading file "+currFileName
             read_data = f.read()
             curr_json_dict = json.loads(read_data)
             jsonDictArr.append(curr_json_dict)
@@ -49,14 +54,21 @@ def buildBugObjects():
                     setattr(curr_bug,member,curr_bug_dict[member])
     
             #if we could not set the bug id there is a problem and we should not add bug to collection
+            #change break to continue
             curr_bug_id = curr_bug.id
             if not curr_bug_id > 0:
-                break
+                continue
+
+            #handle potential duplicates of bugs
+            if curr_bug_id in allBugs.bugs.keys():
+                continue
 
             #open the associated comment file if it exists
+            gotComment = 0
             for curr_directory in subdir_Arr:
                 comment_fname = os.path.join(directory,curr_directory,comment_prefix+str(curr_bug_id)+'.txt')
-                if os.path.isfile(comment_fname):
+                if os.path.isfile(comment_fname) and (gotComment == 0):
+                    gotComment = 1
                     with open(comment_fname) as f:
                         comment_read_data = f.read()
                         comment_json_dict = json.loads(comment_read_data)
@@ -68,9 +80,11 @@ def buildBugObjects():
                         curr_bug.comments.append(curr_comment)
 
             #open the associated history file if it exists
+            gotHistory = 0
             for curr_directory in subdir_Arr:
                 history_fname = os.path.join(directory,curr_directory,history_prefix+str(curr_bug_id)+'.txt')
-                if os.path.isfile(history_fname):
+                if os.path.isfile(history_fname) and (gotHistory==0):
+                    gotHistory=1
                     with open(history_fname) as f:
                         history_read_data = f.read()
                         history_json_dict = json.loads(history_read_data)
@@ -90,6 +104,28 @@ def buildBugObjects():
                         curr_bug.histories.append(curr_history)
 
             allBugs.bugs[curr_bug.id] = curr_bug
+            if curr_bug.resolution != '':
+                resolutionDict[curr_bug.resolution] = resolutionDict[curr_bug.resolution] + 1
+            else:
+                resolutionDict['NULL'] = resolutionDict['NULL'] + 1
+                if print_Counter < 5:
+                    print("ID: "+str(curr_bug.id))
+                    print_Counter = print_Counter + 1
+
+            #track priority totals
+            if curr_bug.priority != '':
+                priorityDict[curr_bug.priority] = priorityDict[curr_bug.priority] + 1
+            else:
+                priorityDict['NULL'] = priorityDict['NULL']+1
+            #track comment totals
+            commentTotalDict[len(curr_bug.comments)] = commentTotalDict[len(curr_bug.comments)]+1
+            #track severity totals
+            if curr_bug.severity != '':
+                severityDict[curr_bug.severity] = severityDict[curr_bug.severity] + 1
+            else:
+                severityDict['NULL'] = severityDict['NULL']+1
+
+
             if DEBUG == True:
                 print('Added bug {}'.format(curr_bug_id))
 
@@ -97,6 +133,18 @@ def buildBugObjects():
         print("Total bugs after parsing file:"+str(len(allBugs.bugs.keys())))
         with open(os.path.join(directory,output_file),'wb') as f:
             pickle.dump(allBugs,f)
+    
+    for key in resolutionDict.keys():
+        print(key + ": "+str(resolutionDict[key]))
+
+    for key in priorityDict.keys():
+        print(key + ": "+str(priorityDict[key]))    
+
+    for key in commentTotalDict.keys():
+        print(str(key) + ": "+str(commentTotalDict[key]))
+
+    for key in severityDict.keys():
+        print(str(key) + ": "+str(severityDict[key]))    
 
     ##DEBUGGING SCRIPT TO PRINT FIRST BUG
     if DEBUG == True:
